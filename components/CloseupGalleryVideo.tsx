@@ -6,11 +6,11 @@ const ShowcaseSection = ({ videoPath, title, subtitle, align = 'center' }: any) 
     <section className="relative w-full h-[80vh] bg-black overflow-hidden flex flex-col items-center justify-center border-t border-white/5">
         {/* Fallback pattern or video */}
         <div className="absolute inset-0 bg-neutral-900" />
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale hover:grayscale-0 transition-all duration-1000">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-60">
             <source src={videoPath} type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
 
         <motion.div
             initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ margin: "-10%" }} transition={{ duration: 0.8 }}
