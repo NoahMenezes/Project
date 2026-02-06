@@ -12,12 +12,12 @@ export default function PricingTiers() {
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover opacity-20 filter grayscale contrast-125"
+                    className="w-full h-full object-cover opacity-50"
                 >
                     {/* Using one of the available videos as a background for the section */}
                     <source src="/sourced-daily.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-black/80"></div>
+                <div className="absolute inset-0 bg-black/50"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto">
