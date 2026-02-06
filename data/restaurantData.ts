@@ -1,100 +1,100 @@
 export const restaurantData = {
     navbar: {
-        brand: "LUMIÈRE",
-        links: ["EXPERIENCE", "MENU", "CONTACT"],
-        cta: "RESERVE"
+        brand: "COPPERLEAF",
+        links: ["OUR STORY", "MENU", "LOCATIONS", "CONTACT"],
+        cta: "RESERVE TABLE"
     },
     hero: {
-        badge: "KITCHEN LIVE",
-        scrollHint: "SCROLL FOR EXPERIENCE",
-        chefName: "CHEF RAJ",
-        chefTitle: "EXECUTIVE",
-        ingredientName: "WAGYU A5 MIYAZAKI",
+        badge: "GOA'S FAVOURITE",
+        scrollHint: "SCROLL FOR FLAVOR",
+        chefName: "SINCE 2016",
+        chefTitle: "FINE DINING",
+        ingredientName: "MULTI-CUISINE",
         tempMetric: {
-            label: "TEMP",
-            value: "52°C",
-            status: "PERFECT"
+            label: "SERVED",
+            value: "1.3M+",
+            status: "HAPPY GUESTS"
         },
-        title: "LUMIÈRE",
-        subtitle: "Michelin-starred culinary artistry. 12-course tasting journey.",
+        title: "COPPERLEAF",
+        subtitle: "The Ultimate Dining Experience. A multi-cuisine fine dining destination celebrating the abundance of flavors.",
         cta: {
-            primary: "RESERVE",
-            secondary: "MENU"
+            primary: "BOOK A TABLE",
+            secondary: "VIEW MENU"
         },
         videoPath: "/background-video.mp4",
     },
     showcase: {
         heading: {
-            subtitle: "Culinary Excellence",
-            title: "Crafted with precision.",
-            highlight: "Served with passion."
+            subtitle: "We create delicious experiences",
+            title: "A Feast for Your Senses",
+            highlight: "Served with Perfection"
         },
         items: [
             {
                 videoPath: "/fire-mastery.mp4",
-                title: "FIRE MASTERY",
-                subtitle: "2,000°F precision. Traditional techniques perfected.",
+                title: "EXQUISITE TASTE",
+                subtitle: "Tantalizing your taste buds with our delicious food.",
                 align: "center"
             },
             {
                 videoPath: "/edible-art.mp4",
-                title: "EDIBLE ART",
-                subtitle: "Michelin-starred presentation. Every plate a canvas.",
+                title: "AROMATIC AMBIANCE",
+                subtitle: "The most exquisite place for excellent service and soothing atmosphere.",
                 align: "left"
             },
             {
                 videoPath: "/sourced-daily.mp4",
-                title: "SOURCED DAILY",
-                subtitle: "Farm-to-table excellence meets global luxury ingredients.",
+                title: "CULINARY MASTERY",
+                subtitle: "Rich culinary instincts blended with perfection at your table.",
                 align: "right"
             }
         ],
         cta: {
-            title: "Your table awaits.",
-            button: "Reserve Now"
+            title: "Come & Enjoy the Ultimate Dining Experience",
+            button: "Visit Us Today"
         }
     },
     reservations: {
         subtitle: "Reservations",
-        title: "Choose your experience",
+        title: "Dine with Us",
         options: [
             {
-                id: "early",
-                name: "Early Seating",
-                price: "$285",
-                features: ["5:30 PM - 6:00 PM", "12-Course Menu", "Wine Pairing Available"]
+                id: "lunch",
+                name: "Lunch",
+                price: "A La Carte",
+                features: ["11:30 AM – 3:30 PM", "Daily Special Menu", "Family Friendly"]
             },
             {
-                id: "prime",
-                name: "Prime Experience",
-                price: "$385",
-                features: ["7:30 PM - 8:00 PM", "Chef's Table Access", "Premium Wine Pairing"]
+                id: "dinner",
+                name: "Dinner",
+                price: "Experience",
+                features: ["7:00 PM – 11:00 PM", "Signature Cocktails", "Fine Dining Ambience"]
             },
             {
                 id: "private",
-                name: "Private Dining",
-                price: "Custom Quote",
-                features: ["Exclusive Kitchen Table", "Personalized Menu", "Sommelier Dedicated Service"]
+                name: "Celebrations",
+                price: "Events",
+                features: ["Large Groups", "Banquet Services", "Customized Menus"]
             }
         ]
     },
     footer: {
         brand: {
-            name: "LUMIÈRE",
-            description: "Fine dining reimagined. Michelin excellence."
+            name: "COPPERLEAF",
+            description: "Goa's favourite multi-cuisine fine dining restaurant."
         },
         address: {
-            title: "Visit",
-            lines: ["123 Culinary Avenue", "Gourmet District", "Goa, India"]
+            title: "Locations",
+            lines: ["Porvorim: Chogm Road, Alto-Porvorim", "Panaji: St. Inez-Taleigao Road"]
         },
         hours: {
             title: "Hours",
-            lines: ["Tuesday - Saturday", "5:30 PM - 11:00 PM"]
+            lines: ["Monday - Sunday", "Lunch: 11:30 AM – 3:30 PM", "Dinner: 7:00 PM – 11:00 PM"]
         },
         contact: {
             title: "Contact",
-            lines: ["reservations@lumiere.com", "+91 (0) 123-4567"]
+            lines: ["eat@copperleafgoa.com", "+91 91750 18461", "+91 75582 98641"]
         },
-        copyright: "© 2026 Raj's Lumière. All rights reserved."
+        copyright: "© 2026 Copperleaf. All rights reserved."
     }
 };
