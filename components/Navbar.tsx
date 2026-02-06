@@ -25,9 +25,13 @@ export default function Navbar() {
 
                 <div className="hidden md:flex gap-10">
                     {restaurantData.navbar.links.map((item) => (
-                        <a key={item} href="#" className="text-xs font-medium tracking-widest text-white/80 hover:text-amber-400 transition uppercase">
+                        <Link
+                            key={item}
+                            href={item === "MENU" ? "/menu" : "#"}
+                            className="text-xs font-medium tracking-widest text-white/80 hover:text-amber-400 transition uppercase"
+                        >
                             {item}
-                        </a>
+                        </Link>
                     ))}
                 </div>
 
