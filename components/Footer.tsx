@@ -1,9 +1,10 @@
 'use client';
 import { restaurantData } from '@/data/restaurantData';
+import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-black text-white py-24 px-6">
+        <footer className="bg-black text-white py-24 px-6 relative z-20 border-t border-white/5">
             <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
 
                 <h2 className="text-3xl font-serif font-bold tracking-widest mb-12">{restaurantData.footer.brand.name}</h2>
@@ -39,9 +40,20 @@ export default function Footer() {
 
                 <div className="w-full h-[1px] bg-white/10 mb-8" />
 
-                <p className="text-gray-600 text-xs tracking-widest uppercase">
-                    {restaurantData.footer.copyright}
-                </p>
+                <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6">
+                    <p className="text-gray-600 text-xs tracking-widest uppercase">
+                        {restaurantData.footer.copyright}
+                    </p>
+
+                    <div className="flex gap-6">
+                        <Link href="/terms" className="text-gray-500 hover:text-amber-500 text-xs tracking-widest uppercase transition-colors">
+                            Terms & Conditions
+                        </Link>
+                        <Link href="/terms" className="text-gray-500 hover:text-amber-500 text-xs tracking-widest uppercase transition-colors">
+                            Privacy Policy
+                        </Link>
+                    </div>
+                </div>
             </div>
         </footer>
     );
