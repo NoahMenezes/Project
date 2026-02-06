@@ -5,39 +5,46 @@ import { restaurantData } from '@/data/restaurantData';
 export default function CloseupGalleryVideo() {
     return (
         <div className="bg-black text-white relative z-20">
-            {/* Header Section */}
-            <div className="py-32 text-center bg-zinc-950 relative overflow-hidden">
-                <div className="relative z-10">
-                    <h3 className="text-xs font-bold text-amber-500 mb-6 tracking-[0.3em] uppercase">{restaurantData.showcase.heading.subtitle}</h3>
-                    <p className="text-5xl md:text-7xl font-serif tracking-tight text-white max-w-4xl mx-auto leading-none">
-                        {restaurantData.showcase.heading.title} <span className="text-amber-500/80 italic block mt-2">{restaurantData.showcase.heading.highlight}</span>
-                    </p>
-                </div>
-            </div>
-
-            {/* Combined 3 Items Section with Single Video Background */}
+            {/* Main Showcase Section with Unified Video Background */}
             <section className="relative py-40">
                 <div className="absolute inset-0 z-0">
                     <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-60">
-                        {/* Using fire-mastery for the culinary skills section */}
+                        {/* Using fire-mastery for the entire section including header */}
                         <source src="/fire-mastery.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-black/40"></div>
                 </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-40">
-                    {restaurantData.showcase.items.map((item, index) => (
+                <div className="relative z-10 max-w-7xl mx-auto px-6">
+                    {/* Header integrated into the video section */}
+                    <div className="text-center mb-40">
                         <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className={`flex flex-col ${index % 2 === 0 ? 'items-center text-center' : 'items-center text-center'}`}
                         >
-                            <h2 className="text-5xl md:text-8xl font-serif text-white tracking-tight mb-6 drop-shadow-lg">{item.title}</h2>
-                            <p className="text-xl md:text-3xl text-gray-100 font-light leading-relaxed max-w-3xl drop-shadow-md">{item.subtitle}</p>
+                            <h3 className="text-xs font-bold text-amber-500 mb-6 tracking-[0.3em] uppercase drop-shadow-md">{restaurantData.showcase.heading.subtitle}</h3>
+                            <p className="text-5xl md:text-7xl font-serif tracking-tight text-white max-w-4xl mx-auto leading-none drop-shadow-lg">
+                                {restaurantData.showcase.heading.title} <span className="text-amber-500/80 italic block mt-2">{restaurantData.showcase.heading.highlight}</span>
+                            </p>
                         </motion.div>
-                    ))}
+                    </div>
+
+                    {/* Items */}
+                    <div className="space-y-40">
+                        {restaurantData.showcase.items.map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className={`flex flex-col items-center text-center`}
+                            >
+                                <h2 className="text-5xl md:text-8xl font-serif text-white tracking-tight mb-6 drop-shadow-lg">{item.title}</h2>
+                                <p className="text-xl md:text-3xl text-gray-100 font-light leading-relaxed max-w-3xl drop-shadow-md">{item.subtitle}</p>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
