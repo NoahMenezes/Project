@@ -27,7 +27,11 @@ export default function Navbar() {
                     {restaurantData.navbar.links.map((item) => (
                         <Link
                             key={item}
-                            href={item === "MENU" ? "/menu" : "#"}
+                            href={
+                                item === "MENU" ? "/menu" :
+                                    item === "LOCATIONS" ? "/locations" :
+                                        "#"
+                            }
                             className="text-xs font-medium tracking-widest text-white/80 hover:text-amber-400 transition uppercase"
                         >
                             {item}
