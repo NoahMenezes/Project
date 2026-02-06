@@ -31,19 +31,19 @@ export const restaurantData = {
         },
         items: [
             {
-                videoPath: "/videos/closeups/flame-cooking.mp4",
+                videoPath: "/fire-mastery.mp4",
                 title: "FIRE MASTERY",
                 subtitle: "2,000°F precision. Traditional techniques perfected.",
                 align: "center"
             },
             {
-                videoPath: "/videos/closeups/plating-artistry.mp4",
+                videoPath: "/edible-art.mp4",
                 title: "EDIBLE ART",
                 subtitle: "Michelin-starred presentation. Every plate a canvas.",
                 align: "left"
             },
             {
-                videoPath: "/videos/closeups/ingredient-selection.mp4",
+                videoPath: "/sourced-daily.mp4",
                 title: "SOURCED DAILY",
                 subtitle: "Farm-to-table excellence meets global luxury ingredients.",
                 align: "right"
