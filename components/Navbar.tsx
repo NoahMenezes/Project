@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { restaurantData } from '@/data/restaurantData';
 
@@ -30,9 +31,11 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                <button className="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm">
-                    {restaurantData.navbar.cta}
-                </button>
+                <Link href="/reservations">
+                    <button className="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm">
+                        {restaurantData.navbar.cta}
+                    </button>
+                </Link>
             </div>
         </motion.nav>
     );
