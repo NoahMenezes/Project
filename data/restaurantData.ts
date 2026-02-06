@@ -21,7 +21,7 @@ export const restaurantData = {
             primary: "RESERVE",
             secondary: "MENU"
         },
-        videoPath: "/videos/hero/chef-culinary-mastery.mp4",
+        videoPath: "/background-video.mp4",
     },
     showcase: {
         heading: {
