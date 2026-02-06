@@ -25,7 +25,7 @@ export default function TermsAndConditions() {
             </div>
 
             <div className="relative z-10 max-w-4xl mx-auto px-6 py-40">
-                <motion_div_placeholder>
+                <MotionDivPlaceholder>
                     <h1 className="text-4xl md:text-5xl font-serif font-bold mb-12 text-amber-500">Terms & Conditions</h1>
 
                     <div className="prose prose-invert max-w-none prose-p:text-gray-300 prose-headings:text-white prose-headings:font-serif">
@@ -82,7 +82,7 @@ export default function TermsAndConditions() {
                         </ul>
 
                     </div>
-                </motion_div_placeholder>
+                </MotionDivPlaceholder>
             </div>
             <Footer />
         </main>
@@ -90,6 +90,6 @@ export default function TermsAndConditions() {
 }
 
 // Helper component to avoid 'framer-motion' import errors if used directly in server components (though this file is client)
-function motion_div_placeholder({ children }: { children: React.ReactNode }) {
+function MotionDivPlaceholder({ children }: { children: React.ReactNode }) {
     return <div className="animate-fade-in-up">{children}</div>;
 }
