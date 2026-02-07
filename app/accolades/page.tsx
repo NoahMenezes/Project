@@ -111,6 +111,13 @@ const awards = [
         description: "Voted as the ultimate destination for the most authentic and loved Goan Fish Thali."
     },
     {
+        year: "2017",
+        title: "Most Popular Restaurant",
+        organization: "Times Food Awards Goa Winner",
+        issuer: "Times Food",
+        description: "Voted as the state's most popular dining destination for its exceptional food and service."
+    },
+    {
         year: "2019",
         title: "Certificate of Excellence",
         organization: "Tripadvisor",
@@ -180,7 +187,7 @@ export default function AccoladesPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-8 hover:border-amber-500/50 transition-all duration-500 flex flex-col items-center text-center"
+                            className="group bg-black border border-white/10 rounded-lg p-8 hover:border-amber-500/50 transition-all duration-500 flex flex-col items-center text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.5)]"
                         >
                             <div className="mb-8 relative">
                                 {/* Award Icon/Graphic Placeholder */}
