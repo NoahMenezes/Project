@@ -54,8 +54,8 @@ export default function MenuPage() {
                             key={option.id}
                             onClick={() => setActiveOption(option)}
                             className={`px-8 py-3 rounded-full text-sm font-bold tracking-[0.2em] uppercase transition-all duration-300 ${activeOption.id === option.id
-                                    ? 'bg-amber-600 text-white shadow-[0_0_20px_rgba(217,119,6,0.5)]'
-                                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                                ? 'bg-amber-600 text-white shadow-[0_0_20px_rgba(217,119,6,0.5)]'
+                                : 'text-gray-300 hover:text-white hover:bg-white/10'
                                 }`}
                         >
                             {option.label}
@@ -63,18 +63,28 @@ export default function MenuPage() {
                     ))}
                 </div>
 
-                {/* Empty Content Placeholder */}
+                {/* Menu Content */}
                 <motion.div
                     key={activeOption.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full max-w-4xl h-96 border border-white/10 rounded-3xl bg-white/5 backdrop-blur-sm flex items-center justify-center mb-20"
+                    className="w-full max-w-5xl md:h-[800px] h-[600px] border border-white/10 rounded-3xl bg-white/5 backdrop-blur-sm flex items-center justify-center mb-20 overflow-hidden"
                 >
-                    <div className="text-center text-gray-400">
-                        <p className="text-xl font-serif italic mb-2">{activeOption.label} Menu</p>
-                        <p className="text-sm tracking-widest uppercase opacity-50">Coming Soon</p>
-                    </div>
+                    {activeOption.id === 'delivery' ? (
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSe4R0PqqxkFAiQx9YPOjTFu6uOITvoBusKe34kY6JmKk3JvLQ/viewform?embedded=true"
+                            className="w-full h-full border-none"
+                            title="Delivery Form"
+                        >
+                            Loading…
+                        </iframe>
+                    ) : (
+                        <div className="text-center text-gray-400">
+                            <p className="text-xl font-serif italic mb-2">{activeOption.label} Menu</p>
+                            <p className="text-sm tracking-widest uppercase opacity-50">Coming Soon</p>
+                        </div>
+                    )}
                 </motion.div>
 
             </div>

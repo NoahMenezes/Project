@@ -771,7 +771,8 @@
         "menu_links": {
             "food_drive": "https://drive.google.com/file/d/1CSwvym-7QbmMEA7fJNbLKw5j4Vh3WGoH/view",
             "bar_drive": "https://drive.google.com/file/d/1LI3i82jZe3FsG_L_gSEOr9_bOhMW9q9z/view",
-            "delivery_form": "https://docs.google.com/forms/d/e/1FAIpQLSe4R0PqqxkFAiQx9YPOjTFu6uOITvoBusKe34kY6JmKk3JvLQ/viewform"
+            "delivery_form": "https://docs.google.com/forms/d/e/1FAIpQLSe4R0PqqxkFAiQx9YPOjTFu6uOITvoBusKe34kY6JmKk3JvLQ/viewform?embedded=true",
+            "elite_club_form": "https://docs.google.com/forms/d/e/1FAIpQLSe2m9eptyRyn2nDCdRHBhvAx8_eI5pAQtcFXmqN6dbImkcwvA/viewform?embedded=true"
         },
         "paragraphs": [
             "FOR ENQUIRIES: +91 90750 18460 / +91 91750 18461 JOIN NOW",
@@ -1041,7 +1042,7 @@
     {
         "url": "https://www.copperleafgoa.com/menu/deliverymenu",
         "title": "Delivery & Takeaway",
-        "google_form_link": "https://docs.google.com/forms/d/e/1FAIpQLSe4R0PqqxkFAiQx9YPOjTFu6uOITvoBusKe34kY6JmKk3JvLQ/viewform",
+        "google_form_link": "https://docs.google.com/forms/d/e/1FAIpQLSe4R0PqqxkFAiQx9YPOjTFu6uOITvoBusKe34kY6JmKk3JvLQ/viewform?embedded=true",
         "headings": [
             "Delivery & Takeaway Menu",
             "ABOUT US",

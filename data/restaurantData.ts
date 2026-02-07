@@ -1,8 +1,9 @@
 export const restaurantData = {
     navbar: {
         brand: "COPPERLEAF",
-        links: ["OUR STORY", "MENU", "LOCATIONS", "CONTACT"],
-        cta: "RESERVE TABLE"
+        links: ["OUR STORY", "MENU", "LOCATIONS", "CONTACT", "ELITE CLUB"],
+        cta: "RESERVE TABLE",
+        eliteClubLink: "https://docs.google.com/forms/d/e/1FAIpQLSe2m9eptyRyn2nDCdRHBhvAx8_eI5pAQtcFXmqN6dbImkcwvA/viewform?embedded=true"
     },
     hero: {
         badge: "GOA'S FAVOURITE",

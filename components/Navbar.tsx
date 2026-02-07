@@ -30,8 +30,11 @@ export default function Navbar() {
                             href={
                                 item === "MENU" ? "/menu" :
                                     item === "LOCATIONS" ? "/locations" :
-                                        "#"
+                                        item === "ELITE CLUB" ? (restaurantData.navbar as any).eliteClubLink :
+                                            "#"
                             }
+                            target={item === "ELITE CLUB" ? "_blank" : undefined}
+                            rel={item === "ELITE CLUB" ? "noopener noreferrer" : undefined}
                             className="text-xs font-medium tracking-widest text-white/80 hover:text-amber-400 transition uppercase"
                         >
                             {item}
