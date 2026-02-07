@@ -69,6 +69,12 @@ export default function Navbar() {
                                         >
                                             Programs
                                         </Link>
+                                        <Link
+                                            href="/private-dining"
+                                            className="block px-6 py-4 text-xs tracking-widest text-white/70 hover:text-amber-400 hover:bg-white/5 transition uppercase border-t border-white/5"
+                                        >
+                                            Private Dining
+                                        </Link>
                                     </div>
                                 </div>
                             );
