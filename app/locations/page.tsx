@@ -28,8 +28,8 @@ function LocationsContent() {
         Porvorim: {
             title: "Copperleaf Porvorim",
             description: "Copperleaf Porvorim, is a multi-cuisine fine dining restaurant with a bar located on Chogm Road, Porvorim. Copperleaf Porvorim is the first outlet opened in 2016 with 180 seats. We have served more than 1.5 million (15 lacs) happy customers till date. Copperleaf has been awarded 19 awards at the State and National level in the last 6 years. The Porvorim outlet has 4 seating areas. The Pavillion is on the ground floor, Pepper on the mezzanine floor with a Private Dining Area – Mint – for 30 to 35 pax. Solaris is a new dining area located on the first floor for up to 50 pax. Porvorim outlet also offers Delivery & Takeaway services.",
-            lat: 15.5342,
-            lng: 73.8188
+            lat: 15.5388808,
+            lng: 73.8184801
         },
         Panaji: {
             title: "Copperleaf Panaji",
@@ -83,32 +83,31 @@ function LocationsContent() {
                             {locations[activeLocation as keyof typeof locations].description}
                         </p>
 
-                        {activeLocation === 'Panaji' && (
-                            <div className="h-[500px] w-full border border-white/10 rounded-sm overflow-hidden bg-black/40 mt-12 animate-in fade-in slide-in-from-bottom-5 duration-1000">
-                                <Map
-                                    center={[locations.Panaji.lng, locations.Panaji.lat] as [number, number]}
-                                    zoom={15}
+                        <div className="h-[500px] w-full border border-white/10 rounded-sm overflow-hidden bg-black/40 mt-12 animate-in fade-in slide-in-from-bottom-5 duration-1000">
+                            <Map
+                                center={[locations[activeLocation as keyof typeof locations].lng, locations[activeLocation as keyof typeof locations].lat] as [number, number]}
+                                zoom={15}
+                                key={activeLocation}
+                            >
+                                <MapMarker
+                                    longitude={locations[activeLocation as keyof typeof locations].lng}
+                                    latitude={locations[activeLocation as keyof typeof locations].lat}
                                 >
-                                    <MapMarker
-                                        longitude={locations.Panaji.lng}
-                                        latitude={locations.Panaji.lat}
-                                    >
-                                        <MarkerContent>
-                                            <div className="size-5 rounded-full border-2 border-white shadow-lg bg-amber-500 animate-pulse" />
-                                        </MarkerContent>
-                                        <MarkerTooltip>{locations.Panaji.title}</MarkerTooltip>
-                                        <MarkerPopup>
-                                            <div className="space-y-1 p-2 bg-black/90 text-white rounded-sm border border-amber-500/20">
-                                                <p className="font-medium text-amber-500">{locations.Panaji.title}</p>
-                                                <p className="text-xs opacity-70">
-                                                    Visit Us in Panaji
-                                                </p>
-                                            </div>
-                                        </MarkerPopup>
-                                    </MapMarker>
-                                </Map>
-                            </div>
-                        )}
+                                    <MarkerContent>
+                                        <div className="size-5 rounded-full border-2 border-white shadow-lg bg-amber-500 animate-pulse" />
+                                    </MarkerContent>
+                                    <MarkerTooltip>{locations[activeLocation as keyof typeof locations].title}</MarkerTooltip>
+                                    <MarkerPopup>
+                                        <div className="space-y-1 p-2 bg-black/90 text-white rounded-sm border border-amber-500/20">
+                                            <p className="font-medium text-amber-500">{locations[activeLocation as keyof typeof locations].title}</p>
+                                            <p className="text-xs opacity-70">
+                                                Visit Us in {activeLocation}
+                                            </p>
+                                        </div>
+                                    </MarkerPopup>
+                                </MapMarker>
+                            </Map>
+                        </div>
                     </div>
                 </div>
             </div>

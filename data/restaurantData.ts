@@ -66,8 +66,8 @@ export const restaurantData = {
         {
             id: 2,
             name: "Copperleaf Porvorim",
-            lat: 15.5342,
-            lng: 73.8188,
+            lat: 15.5388808,
+            lng: 73.8184801,
             address: "Chogm Road, Alto-Porvorim, Goa 403521"
         }
     ],
