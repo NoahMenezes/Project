@@ -1,10 +1,19 @@
 'use client';
-import { useState } from 'react';
+import { useState, Suspense, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useSearchParams } from 'next/navigation';
 
-export default function LocationsPage() {
+function LocationsContent() {
+    const searchParams = useSearchParams();
+    const locParam = searchParams.get('loc');
     const [activeLocation, setActiveLocation] = useState('Porvorim');
+
+    useEffect(() => {
+        if (locParam === 'Panaji' || locParam === 'Porvorim') {
+            setActiveLocation(locParam);
+        }
+    }, [locParam]);
 
     const locations = {
         Porvorim: {
@@ -64,5 +73,13 @@ export default function LocationsPage() {
 
             <Footer />
         </main>
+    );
+}
+
+export default function LocationsPage() {
+    return (
+        <Suspense fallback={<div className="bg-black min-h-screen"></div>}>
+            <LocationsContent />
+        </Suspense>
     );
 }
