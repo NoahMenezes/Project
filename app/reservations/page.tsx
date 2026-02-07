@@ -3,8 +3,18 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import PremiumModal from '@/components/PremiumModal';
 
 export default function ReservationsPage() {
+    const [showModal, setShowModal] = useState(false);
+    const [loadCount, setLoadCount] = useState(0);
+
+    const handleIframeLoad = () => {
+        setLoadCount(prev => prev + 1);
+        if (loadCount > 0) {
+            setShowModal(true);
+        }
+    };
     return (
         <main className="bg-black text-white min-h-screen relative font-rajdhani">
             <Navbar />
@@ -93,6 +103,7 @@ export default function ReservationsPage() {
                         <div className="absolute inset-0 z-10 pointer-events-none border-[8px] border-white/5 rounded-sm"></div>
                         <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLSd7q9aKri9SEST71514iIOMlFdPPl3Dlqyq_GwoJDD_gkWocQ/viewform?embedded=true"
+                            onLoad={handleIframeLoad}
                             className="w-full h-full border-none transform scale-[1.01]"
                             title="Table Reservation Form"
                         >
@@ -102,6 +113,13 @@ export default function ReservationsPage() {
                 </div>
             </div>
             <Footer />
+
+            <PremiumModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                title="Reservation Requested"
+                message="Thank you for your request. Our team will review the availability and contact you shortly to confirm your reservation. We look forward to hosting you at Copperleaf."
+            />
         </main>
     );
 }

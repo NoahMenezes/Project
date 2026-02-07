@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
+import PremiumModal from '@/components/PremiumModal';
 
 const menuOptions = [
     { id: 'food', label: 'Food Menu', video: '/fire-mastery.mp4', link: 'https://drive.google.com/file/d/1CSwvym-7QbmMEA7fJNbLKw5j4Vh3WGoH/preview' },
@@ -12,6 +13,18 @@ const menuOptions = [
 
 export default function MenuPage() {
     const [activeOption, setActiveOption] = useState(menuOptions[0]);
+    const [showModal, setShowModal] = useState(false);
+    const [loadCount, setLoadCount] = useState(0);
+
+    const handleIframeLoad = () => {
+        // Only trigger if we are on the delivery menu (the only Google Form)
+        if (activeOption.id === 'delivery') {
+            setLoadCount(prev => prev + 1);
+            if (loadCount > 0) {
+                setShowModal(true);
+            }
+        }
+    };
 
     return (
         <main className="bg-black text-white min-h-screen relative font-rajdhani flex flex-col">
@@ -72,6 +85,7 @@ export default function MenuPage() {
                 >
                     <iframe
                         src={(activeOption as any).link}
+                        onLoad={handleIframeLoad}
                         className="w-full h-full border-none"
                         title={activeOption.label}
                         allow="autoplay"
@@ -83,6 +97,13 @@ export default function MenuPage() {
             </div>
 
             <Footer />
+
+            <PremiumModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                title="Request Successful"
+                message="Your request for the latest menu has been received. We will send the details to your provided WhatsApp number shortly."
+            />
         </main>
     );
 }

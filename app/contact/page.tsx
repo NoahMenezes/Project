@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import PremiumModal from '@/components/PremiumModal';
 
 const contactOptions = [
     {
@@ -159,6 +160,23 @@ const contactOptions = [
 
 export default function ContactPage() {
     const [activeOption, setActiveOption] = useState(contactOptions[0]);
+    const [showModal, setShowModal] = useState(false);
+    const [modalConfig, setModalConfig] = useState({ title: '', message: '', type: 'success' as 'success' | 'confirm' });
+    const [loadCount, setLoadCount] = useState(0);
+
+    const handleIframeLoad = () => {
+        setLoadCount(prev => prev + 1);
+        // If it's the second load or more, it usually means the form was submitted 
+        // and redirected to the "Response Recorded" page.
+        if (loadCount > 0) {
+            setModalConfig({
+                title: 'Request Received',
+                message: 'Thank you for reaching out to Copperleaf. Your request has been successfully transmitted to our team. We will get back to you shortly.',
+                type: 'success'
+            });
+            setShowModal(true);
+        }
+    };
 
     return (
         <main className="bg-black text-white min-h-screen relative font-rajdhani flex flex-col">
@@ -228,6 +246,7 @@ export default function ContactPage() {
                                         <div className="absolute inset-0 z-10 pointer-events-none border-[8px] border-white/5 rounded-sm"></div>
                                         <iframe
                                             src={activeOption.form}
+                                            onLoad={handleIframeLoad}
                                             className="w-full h-full border-none transform scale-[1.01]"
                                             title={activeOption.label}
                                         >
@@ -270,6 +289,14 @@ export default function ContactPage() {
             </div>
 
             <Footer />
+
+            <PremiumModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                title={modalConfig.title}
+                message={modalConfig.message}
+                type={modalConfig.type}
+            />
         </main>
     );
 }

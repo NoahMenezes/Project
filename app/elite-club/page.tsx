@@ -1,9 +1,19 @@
-'use client';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import PremiumModal from '@/components/PremiumModal';
 
 export default function EliteClubPage() {
+    const [showModal, setShowModal] = useState(false);
+    const [loadCount, setLoadCount] = useState(0);
+
+    const handleIframeLoad = () => {
+        setLoadCount(prev => prev + 1);
+        if (loadCount > 0) {
+            setShowModal(true);
+        }
+    };
     return (
         <main className="bg-black text-white min-h-screen relative font-rajdhani flex flex-col">
             <Navbar />
@@ -66,7 +76,7 @@ export default function EliteClubPage() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-black/60 backdrop-blur-md p-10 md:p-16 border border-white/10 rounded-sm mb-24 shadow-2xl"
+                    className="bg-white/5 backdrop-blur-3xl p-10 md:p-16 border border-white/10 rounded-sm mb-24 shadow-2xl"
                 >
                     <div className="inline-block px-4 py-1 border border-amber-500/30 rounded-full text-[10px] tracking-[0.3em] uppercase text-amber-500 font-bold mb-6">
                         Tiered Privilege
@@ -98,6 +108,7 @@ export default function EliteClubPage() {
                 >
                     <iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLSe2m9eptyRyn2nDCdRHBhvAx8_eI5pAQtcFXmqN6dbImkcwvA/viewform?embedded=true"
+                        onLoad={handleIframeLoad}
                         className="w-full h-full border-none"
                         title="Elite Club Membership Form"
                     >
@@ -107,6 +118,13 @@ export default function EliteClubPage() {
             </div>
 
             <Footer />
+
+            <PremiumModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                title="Application Received"
+                message="Thank you for your interest in the Copperleaf Elite Club. Your application has been successfully submitted. Our membership team will review your details and reach out to you within 48 hours."
+            />
         </main>
     );
 }
@@ -118,7 +136,7 @@ function BenefitCard({ title, description }: { title: string, description: strin
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-10 bg-black/40 backdrop-blur-md border border-white/10 rounded-sm hover:border-amber-500/50 transition-all duration-500 group shadow-lg"
+            className="p-10 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-sm hover:border-amber-500/50 transition-all duration-500 group shadow-lg"
         >
             <div className="w-8 h-8 rounded-full border border-amber-500/20 flex items-center justify-center mb-8 group-hover:bg-amber-500/10 transition-colors">
                 <div className="w-1 h-1 bg-amber-500 rounded-full"></div>
