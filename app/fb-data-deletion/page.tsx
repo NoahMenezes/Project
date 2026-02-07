@@ -47,7 +47,7 @@ export default function FBDataDeletionPage() {
 
                         <section className="space-y-4 bg-white/5 p-8 rounded-sm border border-white/10">
                             {[
-                                'Go to your Facebook Account’s “Settings & Privacy”.',
+                                'Go to your Facebook Account&rsquo;s &ldquo;Settings & Privacy&rdquo;.',
                                 'Click “Settings”',
                                 'Then click “Security and Login”.',
                                 'Look for “Apps and Websites” and you will see all of the apps and websites you have linked with your Facebook account.',

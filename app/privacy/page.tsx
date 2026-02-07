@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
                         <section>
                             <h2 className="text-2xl font-serif font-bold text-white mb-6 uppercase tracking-wider">1. Introduction</h2>
                             <p className="text-lg">
-                                At Copperleaf (a brand under Vishwamukta Group), we are committed to protecting the privacy and security of our guests' personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you visit our restaurants in Panaji or Porvorim, use our website, or enroll in our loyalty programs.
+                                At Copperleaf (a brand under Vishwamukta Group), we are committed to protecting the privacy and security of our guests&apos; personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you visit our restaurants in Panaji or Porvorim, use our website, or enroll in our loyalty programs.
                             </p>
                         </section>
 
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
                                 </p>
                                 <p className="flex items-start gap-4">
                                     <span className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2.5"></span>
-                                    <span>To credit Elite Club points and notify you of exclusive "Birthday" or "Anniversary" incentives.</span>
+                                    <span>To credit Elite Club points and notify you of exclusive &quot;Birthday&quot; or &quot;Anniversary&quot; incentives.</span>
                                 </p>
                                 <p className="flex items-start gap-4">
                                     <span className="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2.5"></span>

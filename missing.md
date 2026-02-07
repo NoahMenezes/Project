@@ -10,9 +10,9 @@ Privacy Policy: [DONE] - Fully populated with Copperleaf-specific data collectio
 AR Menu App Privacy Policy: [DONE] - Detailed privacy terms for the mobile AR application created and linked.
 📖 2. Content Gaps (On Existing Pages)
 About Us / Our Company
-Subsidiaries: Missing mention of the broader Vishwamukta Group ventures: Omkar Developers, VMPL, VME, and Megalon.
-Team Size: Mention of the 200+ team members working under a common ideology.
-Hotel Blessings: The history of managing "Hotel Blessings" in Panaji as the starting point in 2002.
+Subsidiaries: [DONE] - Mention of Omkar Developers, VMPL, VME, and Megalon added.
+Team Size: [DONE] - Mention of the 200+ team members included.
+Hotel Blessings: [DONE] - History of managing Hotel Blessings in Panaji (starting point in 2002) added.
 Locations (Panaji & Porvorim)
 Specific Seating Area Names:
 Panaji: Cilantro, Citrus, Bellini Seating Bar, Infinity Seating Area.

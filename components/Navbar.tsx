@@ -140,7 +140,7 @@ export default function Navbar() {
                                     item === 'HOME' ? '/' :
                                         item === 'MENU' ? '/menu' :
                                             item === 'ELITE CLUB'
-                                                ? (restaurantData.navbar as any).eliteClubLink
+                                                ? restaurantData.navbar.eliteClubLink
                                                 : item === 'RESERVATIONS'
                                                     ? '/reservations'
                                                     : item === 'LOCATIONS'

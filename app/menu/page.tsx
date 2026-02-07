@@ -16,7 +16,7 @@ export default function MenuPage() {
     const [showModal, setShowModal] = useState(false);
     const [loadCount, setLoadCount] = useState(0);
 
-    const handleTabChange = (option: any) => {
+    const handleTabChange = (option: typeof menuOptions[0]) => {
         setActiveOption(option);
         setLoadCount(0); // Reset load count for fresh iframe load
     };
@@ -89,7 +89,7 @@ export default function MenuPage() {
                     className="w-full max-w-5xl md:h-[900px] h-[700px] border border-white/10 rounded-3xl bg-white/5 backdrop-blur-sm flex items-center justify-center mb-20 overflow-hidden shadow-2xl"
                 >
                     <iframe
-                        src={(activeOption as any).link}
+                        src={activeOption.link}
                         onLoad={handleIframeLoad}
                         className="w-full h-full border-none"
                         title={activeOption.label}
