@@ -214,20 +214,20 @@ export default function ContactPage() {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.98 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-                            className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-sm shadow-2xl overflow-hidden relative"
+                            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-sm shadow-2xl overflow-hidden relative"
                         >
-                            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"></div>
+                            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
 
                             <div className="flex flex-col lg:flex-row min-h-[700px]">
                                 {/* Copy-side */}
-                                <div className="p-8 md:p-16 lg:w-2/5 flex flex-col justify-center bg-gradient-to-br from-white/5 to-transparent relative border-b lg:border-b-0 lg:border-r border-white/10">
+                                <div className="p-8 md:p-16 lg:w-2/5 flex flex-col justify-center bg-white/5 relative border-b lg:border-b-0 lg:border-r border-white/10">
                                     {activeOption.content}
                                 </div>
 
-                                {/* Form-side - Matching User Request Layout */}
-                                <div className="lg:w-3/5 relative bg-black/20 p-4 md:p-10">
-                                    <div className="h-[750px] md:h-[800px] w-full border border-white/10 rounded-sm overflow-hidden bg-black shadow-2xl relative">
-                                        <div className="absolute inset-0 z-10 pointer-events-none border-[12px] border-black/80 rounded-sm"></div>
+                                {/* Form-side - Strong Glassmorphism */}
+                                <div className="lg:w-3/5 relative p-4 md:p-10 bg-white/5">
+                                    <div className="h-[750px] md:h-[800px] w-full border border-white/20 rounded-sm overflow-hidden bg-white/5 shadow-2xl relative backdrop-blur-md">
+                                        <div className="absolute inset-0 z-10 pointer-events-none border-[8px] border-white/5 rounded-sm"></div>
                                         <iframe
                                             src={activeOption.form}
                                             className="w-full h-full border-none transform scale-[1.01]"
@@ -258,8 +258,8 @@ export default function ContactPage() {
                         <div className="w-16 h-1 bg-amber-500 mx-auto"></div>
                     </div>
 
-                    <div className="w-full h-[850px] border border-white/10 rounded-sm bg-black/80 backdrop-blur-xl overflow-hidden shadow-2xl relative p-1">
-                        <div className="absolute inset-0 z-10 pointer-events-none border-[10px] border-black/60 rounded-sm"></div>
+                    <div className="max-w-4xl mx-auto w-full h-[850px] border border-white/20 rounded-sm bg-white/5 backdrop-blur-2xl overflow-hidden shadow-2xl relative p-1">
+                        <div className="absolute inset-0 z-10 pointer-events-none border-[6px] border-white/10 rounded-sm"></div>
                         <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLSew_9JVCO3zvHdm7hCKHCIYnBI5FaIolngySo0ikvrsfmkKAw/viewform?embedded=true"
                             className="w-full h-full border-none"

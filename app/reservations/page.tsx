@@ -52,7 +52,8 @@ export default function ReservationsPage() {
                             </div>
                         </div>
 
-                        <div className="bg-black/40 backdrop-blur-md border border-white/10 p-10 rounded-sm">
+                        <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-sm shadow-2xl relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
                             <h3 className="text-3xl font-serif text-white mb-4 italic">PRIVATE EVENTS</h3>
                             <p className="text-gray-300 font-light leading-relaxed mb-8">
                                 Looking for an ideal venue? Look no further. From corporate power lunches to cherished family reunions, our dedicated event spaces are designed to host your most important moments with elegance and style.
@@ -62,7 +63,8 @@ export default function ReservationsPage() {
                             </a>
                         </div>
 
-                        <div className="bg-black/40 backdrop-blur-md border border-white/10 p-10 rounded-sm">
+                        <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-sm shadow-2xl relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
                             <h3 className="text-3xl font-serif text-white mb-6 italic">OPEN HOURS</h3>
                             <div className="text-gray-300 font-light space-y-4">
                                 <div className="flex justify-between items-center border-b border-white/5 pb-4">
@@ -83,16 +85,17 @@ export default function ReservationsPage() {
                         </div>
                     </motion.div>
 
-                    {/* Right Column: Form */}
+                    {/* Right Column: Form with Glassmorphism */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="bg-black/60 backdrop-blur-xl border border-white/10 p-2 rounded-sm overflow-hidden h-[900px] shadow-2xl"
+                        className="bg-white/5 backdrop-blur-2xl border border-white/20 p-2 rounded-sm overflow-hidden h-[900px] shadow-2xl relative"
                     >
+                        <div className="absolute inset-0 z-10 pointer-events-none border-[8px] border-white/5 rounded-sm"></div>
                         <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLSd7q9aKri9SEST71514iIOMlFdPPl3Dlqyq_GwoJDD_gkWocQ/viewform?embedded=true"
-                            className="w-full h-full border-none"
+                            className="w-full h-full border-none transform scale-[1.01]"
                             title="Table Reservation Form"
                         >
                             Loading…
