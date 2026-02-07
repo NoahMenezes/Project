@@ -2,7 +2,7 @@ export const restaurantData = {
     navbar: {
         brand: "COPPERLEAF",
         links: ["HOME", "MENU", "OUR RESTAURANTS", "OUR COMPANY", "RESERVATIONS", "CONTACT", "ELITE CLUB"],
-        cta: "RESERVE TABLE",
+        cta: "RESERVATIONS",
         eliteClubLink: "/elite-club"
     },
     hero: {
@@ -19,7 +19,7 @@ export const restaurantData = {
         title: "COPPERLEAF",
         subtitle: "The Ultimate Dining Experience. A multi-cuisine fine dining destination celebrating the abundance of flavors.",
         cta: {
-            primary: "BOOK A TABLE",
+            primary: "RESERVATIONS",
             secondary: "VIEW MENU"
         },
         videoPath: "/background-video.mp4",

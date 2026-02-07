@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { restaurantData } from '@/data/restaurantData';
+import Link from 'next/link';
 
 export default function PricingTiers() {
     return (
@@ -51,9 +52,11 @@ export default function PricingTiers() {
                                 ))}
                             </ul>
 
-                            <button className="relative z-10 w-full py-4 border border-white/20 bg-transparent hover:bg-white text-white hover:text-black font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300">
-                                Reserve Table
-                            </button>
+                            <Link href="/reservations" className="w-full relative z-10">
+                                <button className="w-full py-4 border border-white/20 bg-transparent hover:bg-white text-white hover:text-black font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300">
+                                    Reserve Table
+                                </button>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>

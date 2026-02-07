@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { restaurantData } from '@/data/restaurantData';
+import Link from 'next/link';
 
 export default function CloseupGalleryVideo() {
     return (
@@ -65,9 +66,11 @@ export default function CloseupGalleryVideo() {
                     className="relative z-10 max-w-5xl mx-auto text-center px-6"
                 >
                     <h2 className="text-6xl md:text-9xl font-serif text-white mb-16 tracking-tight leading-[0.9] drop-shadow-2xl">{restaurantData.showcase.cta.title}</h2>
-                    <button className="px-16 py-6 bg-white hover:bg-amber-50 text-black text-sm font-bold tracking-[0.2em] uppercase transition duration-300 shadow-2xl">
-                        {restaurantData.showcase.cta.button}
-                    </button>
+                    <Link href="/contact">
+                        <button className="px-16 py-6 bg-white hover:bg-amber-50 text-black text-sm font-bold tracking-[0.2em] uppercase transition duration-300 shadow-2xl">
+                            {restaurantData.showcase.cta.button}
+                        </button>
+                    </Link>
                 </motion.div>
             </section>
         </div>

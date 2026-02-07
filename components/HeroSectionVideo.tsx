@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { restaurantData } from '@/data/restaurantData';
+import Link from 'next/link';
 
 export default function HeroSectionVideo() {
     return (
@@ -32,12 +33,16 @@ export default function HeroSectionVideo() {
                     </p>
 
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-                        <button className="px-10 py-4 bg-amber-600 hover:bg-amber-700 text-white font-medium text-sm tracking-widest uppercase transition-all duration-300 rounded-sm">
-                            {restaurantData.hero.cta.primary}
-                        </button>
-                        <button className="px-10 py-4 border border-white/30 hover:bg-white/10 text-white font-medium text-sm tracking-widest uppercase transition-all duration-300 rounded-sm backdrop-blur-sm">
-                            {restaurantData.hero.cta.secondary}
-                        </button>
+                        <Link href="/reservations">
+                            <button className="px-10 py-4 bg-amber-600 hover:bg-amber-700 text-white font-medium text-sm tracking-widest uppercase transition-all duration-300 rounded-sm">
+                                {restaurantData.hero.cta.primary}
+                            </button>
+                        </Link>
+                        <Link href="/menu">
+                            <button className="px-10 py-4 border border-white/30 hover:bg-white/10 text-white font-medium text-sm tracking-widest uppercase transition-all duration-300 rounded-sm backdrop-blur-sm">
+                                {restaurantData.hero.cta.secondary}
+                            </button>
+                        </Link>
                     </div>
                 </motion.div>
             </div>

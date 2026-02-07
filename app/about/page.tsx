@@ -166,9 +166,6 @@ export default function AboutPage() {
                     <p className="text-xl text-gray-400 font-light max-w-3xl mx-auto leading-relaxed mb-12">
                         For a truly memorable dining experience, cuisine and atmosphere are paired as thoughtfully as food and wine.
                     </p>
-                    <a href="/locations/panaji" className="inline-block px-12 py-4 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold tracking-[0.3em] uppercase transition-all duration-300 rounded-sm shadow-xl shadow-amber-600/20">
-                        Explore Experience
-                    </a>
                 </motion.div>
             </div>
 
