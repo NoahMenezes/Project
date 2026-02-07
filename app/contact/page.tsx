@@ -164,6 +164,11 @@ export default function ContactPage() {
     const [modalConfig, setModalConfig] = useState({ title: '', message: '', type: 'success' as 'success' | 'confirm' });
     const [loadCount, setLoadCount] = useState(0);
 
+    const handleTabChange = (option: any) => {
+        setActiveOption(option);
+        setLoadCount(0); // Reset load count for the new tab's iframe
+    };
+
     const handleIframeLoad = () => {
         setLoadCount(prev => prev + 1);
         // If it's the second load or more, it usually means the form was submitted 
@@ -212,7 +217,7 @@ export default function ContactPage() {
                     {contactOptions.map((option) => (
                         <button
                             key={option.id}
-                            onClick={() => setActiveOption(option)}
+                            onClick={() => handleTabChange(option)}
                             className={`px-4 md:px-10 py-3 md:py-4 rounded-full text-[9px] md:text-xs font-bold tracking-[0.2em] uppercase transition-all duration-500 relative group overflow-hidden ${activeOption.id === option.id
                                 ? 'bg-amber-600 text-white shadow-[0_0_30px_rgba(217,119,6,0.3)]'
                                 : 'text-gray-400 hover:text-white hover:bg-white/5'

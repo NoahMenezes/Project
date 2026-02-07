@@ -16,6 +16,11 @@ export default function MenuPage() {
     const [showModal, setShowModal] = useState(false);
     const [loadCount, setLoadCount] = useState(0);
 
+    const handleTabChange = (option: any) => {
+        setActiveOption(option);
+        setLoadCount(0); // Reset load count for fresh iframe load
+    };
+
     const handleIframeLoad = () => {
         // Only trigger if we are on the delivery menu (the only Google Form)
         if (activeOption.id === 'delivery') {
@@ -64,7 +69,7 @@ export default function MenuPage() {
                     {menuOptions.map((option) => (
                         <button
                             key={option.id}
-                            onClick={() => setActiveOption(option)}
+                            onClick={() => handleTabChange(option)}
                             className={`px-8 py-3 rounded-full text-sm font-bold tracking-[0.2em] uppercase transition-all duration-300 ${activeOption.id === option.id
                                 ? 'bg-amber-600 text-white shadow-[0_0_20px_rgba(217,119,6,0.5)]'
                                 : 'text-gray-300 hover:text-white hover:bg-white/10'
