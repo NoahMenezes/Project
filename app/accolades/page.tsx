@@ -39,6 +39,41 @@ const awards = [
         organization: "Food Connoisseurs India Awards",
         issuer: "Industry Live",
         description: "Celebrating the finest dining experience in the Western region of India."
+    },
+    {
+        year: "2021",
+        title: "Best Goan Cuisine Restaurant",
+        organization: "Food Connoisseurs India Awards",
+        issuer: "Industry Live",
+        description: "Recognized for preserving and elevating authentic Goan flavors with culinary mastery."
+    },
+    {
+        year: "2021",
+        title: "Best Multi-Cuisine Casual Dining",
+        organization: "Times Food Awards",
+        issuer: "Times Group",
+        description: "Awarded for excellence in variety, taste, and the ultimate casual dining experience."
+    },
+    {
+        year: "2020",
+        title: "Travellers' Choice",
+        organization: "Tripadvisor",
+        issuer: "Tripadvisor",
+        description: "A testament to our consistent high ratings and positive reviews from global travellers."
+    },
+    {
+        year: "2020",
+        title: "Goa Winner",
+        organization: "Times Food Awards",
+        issuer: "Times Group",
+        description: "Crowned as the premier dining destination in Goa for outstanding food and service."
+    },
+    {
+        year: "2020",
+        title: "Iconic Multi-Cuisine Restaurant",
+        organization: "Times Food Delivery Icons",
+        issuer: "Times Group",
+        description: "Recognized for excellence in multi-cuisine offerings and reliable delivery standards."
     }
 ];
 
