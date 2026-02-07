@@ -2,7 +2,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const awards = [
     {
@@ -159,10 +158,18 @@ export default function AccoladesPage() {
         <main className="bg-black text-white min-h-screen relative font-rajdhani flex flex-col">
             <Navbar />
 
-            {/* Background Decor */}
-            <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-amber-900/10 blur-[120px] rounded-full"></div>
-                <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-amber-900/10 blur-[120px] rounded-full"></div>
+            {/* Background Video */}
+            <div className="fixed inset-0 z-0">
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover opacity-30"
+                >
+                    <source src="/fire-mastery.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-black/60"></div>
             </div>
 
             <div className="relative z-10 flex-grow pt-40 pb-24 px-6 max-w-7xl mx-auto w-full">
@@ -187,38 +194,33 @@ export default function AccoladesPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group bg-black border border-white/10 rounded-lg p-8 hover:border-amber-500/50 transition-all duration-500 flex flex-col items-center text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.5)]"
+                            className="group bg-black border border-white/10 rounded-lg p-8 hover:border-amber-500/50 transition-all duration-500 flex flex-col items-center text-center shadow-2xl relative overflow-hidden"
                         >
-                            <div className="mb-8 relative">
-                                {/* Award Icon/Graphic Placeholder */}
-                                <div className="w-32 h-32 rounded-full border-2 border-amber-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                            {/* Subtle hover overlay */}
+                            <div className="absolute inset-0 bg-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                            <div className="mb-8 relative z-10">
+                                <div className="w-32 h-32 rounded-full border-2 border-amber-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 bg-black">
                                     <div className="text-amber-500 text-4xl font-serif font-bold">{award.year}</div>
                                 </div>
-                                <div className="absolute inset-0 bg-amber-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="absolute inset-0 bg-amber-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
 
-                            <h3 className="text-2xl font-serif font-bold text-white mb-2 leading-tight">
+                            <h3 className="text-2xl font-serif font-bold text-white mb-2 leading-tight relative z-10">
                                 {award.title}
                             </h3>
-                            <div className="text-amber-500 text-sm font-bold tracking-[0.1em] uppercase mb-4">
+                            <div className="text-amber-500 text-sm font-bold tracking-[0.1em] uppercase mb-4 relative z-10">
                                 {award.organization}
                             </div>
-                            <p className="text-gray-400 font-light text-sm leading-relaxed flex-grow">
+                            <p className="text-gray-400 font-light text-sm leading-relaxed flex-grow relative z-10">
                                 {award.description}
                             </p>
-                            <div className="mt-6 pt-6 border-t border-white/5 w-full">
+                            <div className="mt-6 pt-6 border-t border-white/5 w-full relative z-10">
                                 <span className="text-[10px] tracking-[0.2em] uppercase text-gray-500">Issued by</span>
                                 <div className="text-xs font-bold text-gray-300 mt-1">{award.issuer}</div>
                             </div>
                         </motion.div>
                     ))}
-                </div>
-
-                {/* Note for User */}
-                <div className="mt-24 text-center">
-                    <p className="text-gray-500 text-sm italic">
-                        * Please upload the award images to your public folder to see them here.
-                    </p>
                 </div>
             </div>
 
