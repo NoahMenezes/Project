@@ -5,25 +5,6 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 export default function ReservationsPage() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        date: '',
-        time: '',
-        guests: '',
-        requests: ''
-    });
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        alert('Thank you for your request. We will contact you shortly to confirm your reservation.');
-    };
-
     return (
         <main className="bg-black text-white min-h-screen relative font-rajdhani">
             <Navbar />
@@ -35,15 +16,14 @@ export default function ReservationsPage() {
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover opacity-40"
+                    className="w-full h-full object-cover opacity-60"
                 >
-                    {/* Reusing the background video or we could copy another one. Using background-video.mp4 for consistency */}
                     <source src="/background-video.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="absolute inset-0 bg-black/40"></div>
             </div>
 
-            <div className="relative z-10 pt-32 pb-20 px-6">
+            <div className="relative z-10 pt-40 pb-20 px-6">
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
 
                     {/* Left Column: Info */}
@@ -54,29 +34,51 @@ export default function ReservationsPage() {
                         className="space-y-12"
                     >
                         <div>
-                            <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6">Reservation</h1>
-                            <p className="text-xl text-gray-300 font-light leading-relaxed">
-                                Table Reservations are recommended. Kindly fill the form below with your request and we will get back to you.
-                            </p>
+                            <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-8">Reservation</h1>
+                            <div className="space-y-6">
+                                <p className="text-xl text-gray-300 font-light leading-relaxed">
+                                    Table Reservations are recommended at Copperleaf to ensure the best possible dining experience for you and your guests. Whether it's a casual family lunch, a romantic dinner, or a milestone celebration, we strive to make every moment memorable.
+                                </p>
+                                <p className="text-lg text-gray-400 font-light leading-relaxed">
+                                    To help us serve you better, we encourage guests to book their tables in advance, especially during weekends and public holidays. Our team will review your request and contact you shortly to confirm the availability.
+                                </p>
+                                <p className="text-lg text-gray-400 font-light leading-relaxed">
+                                    For groups larger than 10, or for specific seating requests like our Private Dining rooms (Solitaire or 10@Infinity), please mention this in the "Special Requests" section of the form or contact us directly at our respective outlets.
+                                </p>
+                                <div className="pt-4">
+                                    <div className="w-12 h-1 bg-amber-500 mb-6"></div>
+                                    <p className="text-amber-500 font-bold uppercase tracking-widest text-sm">Experience the Ultimate Dining</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-sm">
-                            <h3 className="text-2xl font-serif text-amber-500 mb-4">PRIVATE EVENTS</h3>
-                            <p className="text-gray-300 font-light leading-relaxed mb-6">
-                                Looking for an ideal venue? Look no further. Corporate dinners, special occasions, birthday celebrations, let us handle your needs. Check out Private Dining.
+                        <div className="bg-black/40 backdrop-blur-md border border-white/10 p-10 rounded-sm">
+                            <h3 className="text-3xl font-serif text-white mb-4 italic">PRIVATE EVENTS</h3>
+                            <p className="text-gray-300 font-light leading-relaxed mb-8">
+                                Looking for an ideal venue? Look no further. From corporate power lunches to cherished family reunions, our dedicated event spaces are designed to host your most important moments with elegance and style.
                             </p>
-                            <button className="text-xs font-bold tracking-[0.2em] uppercase text-white hover:text-amber-500 transition-colors border-b border-amber-500 pb-1">
-                                Inquire For Events
-                            </button>
+                            <a href="/private-dining" className="inline-block text-xs font-bold tracking-[0.3em] uppercase text-amber-500 hover:text-white transition-colors border-b-2 border-amber-500 pb-2">
+                                Explore Private Dining Spaces
+                            </a>
                         </div>
 
-                        <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-sm">
-                            <h3 className="text-2xl font-serif text-amber-500 mb-4">OPEN HOURS</h3>
-                            <div className="text-gray-300 font-light space-y-2">
-                                <p className="uppercase tracking-widest text-sm">Monday thru Sunday:</p>
-                                <p className="text-2xl font-serif text-white">11:30 AM - 3:30 PM</p>
-                                <p className="text-sm opacity-50">&</p>
-                                <p className="text-2xl font-serif text-white">7:00 PM - 11:00 PM</p>
+                        <div className="bg-black/40 backdrop-blur-md border border-white/10 p-10 rounded-sm">
+                            <h3 className="text-3xl font-serif text-white mb-6 italic">OPEN HOURS</h3>
+                            <div className="text-gray-300 font-light space-y-4">
+                                <div className="flex justify-between items-center border-b border-white/5 pb-4">
+                                    <span className="uppercase tracking-[0.2em] text-xs font-bold text-amber-500">Monday - Sunday</span>
+                                    <span className="text-sm">7 Days a Week</span>
+                                </div>
+                                <div className="grid grid-cols-2 gap-8 pt-2">
+                                    <div>
+                                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Lunch Service</p>
+                                        <p className="text-2xl font-serif text-white">11:30 AM - 3:30 PM</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Dinner Service</p>
+                                        <p className="text-2xl font-serif text-white">7:00 PM - 11:00 PM</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
@@ -86,7 +88,7 @@ export default function ReservationsPage() {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="bg-black/60 backdrop-blur-xl border border-white/10 p-2 rounded-sm overflow-hidden h-[800px]"
+                        className="bg-black/60 backdrop-blur-xl border border-white/10 p-2 rounded-sm overflow-hidden h-[900px] shadow-2xl"
                     >
                         <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLSd7q9aKri9SEST71514iIOMlFdPPl3Dlqyq_GwoJDD_gkWocQ/viewform?embedded=true"

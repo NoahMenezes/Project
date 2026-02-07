@@ -1,7 +1,7 @@
 export const restaurantData = {
     navbar: {
         brand: "COPPERLEAF",
-        links: ["OUR STORY", "MENU", "OUR RESTAURANTS", "OUR COMPANY", "RESERVATIONS", "CONTACT", "ELITE CLUB"],
+        links: ["HOME", "MENU", "OUR RESTAURANTS", "OUR COMPANY", "RESERVATIONS", "CONTACT", "ELITE CLUB"],
         cta: "RESERVE TABLE",
         eliteClubLink: "/elite-club"
     },
@@ -74,9 +74,21 @@ export const restaurantData = {
     termsDriveLink: "https://drive.google.com/file/d/1-kGFvLNgnmLVznr1_9bpVic74jZFvNiM/view",
     reservations: {
         subtitle: "Reservations",
-        title: "Dine with Us",
-        formLink: "https://docs.google.com/forms/d/e/1FAIpQLSd7q9aKri9SEST71514iIOMlFdPPl3Dlqyq_GwoJDD_gkWocQ/viewform?embedded=true",
-        text: "Table Reservations are recommended. Kindly fill the form below with your request and we will get back to you.",
+        title: "Reservation",
+        description: `
+            <p className="text-xl text-gray-300 font-light leading-relaxed mb-6">
+                Table Reservations are recommended at Copperleaf to ensure the best possible dining experience for you and your guests. Whether it's a casual family lunch, a romantic dinner, or a milestone celebration, we strive to make every moment memorable.
+            </p>
+            <div className="space-y-4 text-gray-400 font-light leading-relaxed">
+                <p>
+                    To help us serve you better, we encourage guests to book their tables in advance, especially during weekends and public holidays. Our team will review your request and contact you shortly to confirm the availability.
+                </p>
+                <p>
+                    For groups larger than 10, or for specific seating requests like our Private Dining rooms (Solitaire or 10@Infinity), please mention this in the "Special Requests" section of the form or contact us directly.
+                </p>
+            </div>
+        `,
+        formLink: "https://docs.google.com/forms/d/e/1FAIpQLSd7q9aKri9SEST71514iIOMlFdPPl3Dlqyq_GwoD_gkWocQ/viewform?embedded=true",
         privateEvents: {
             title: "PRIVATE EVENTS",
             description: "Looking for an ideal venue? Look no further. Corporate dinners, special occasions, birthday celebrations, let us handle your needs. Check out Private Dining."
