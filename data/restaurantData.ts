@@ -1,7 +1,7 @@
 export const restaurantData = {
     navbar: {
         brand: "COPPERLEAF",
-        links: ["OUR STORY", "MENU", "OUR RESTAURANTS", "RESERVATIONS", "LOCATIONS", "CONTACT", "ELITE CLUB"],
+        links: ["OUR STORY", "MENU", "OUR RESTAURANTS", "RESERVATIONS", "CONTACT", "ELITE CLUB"],
         cta: "RESERVE TABLE",
         eliteClubLink: "/elite-club"
     },
