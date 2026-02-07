@@ -102,6 +102,9 @@ export default function Footer() {
                     </p>
 
                     <div className="flex gap-10">
+                        <Link href="/about" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
+                            About Us
+                        </Link>
                         <a
                             href={(restaurantData as any).termsDriveLink}
                             target="_blank"
