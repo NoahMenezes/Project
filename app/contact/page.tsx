@@ -214,10 +214,8 @@ export default function ContactPage() {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.98 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
-                            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-sm shadow-2xl overflow-hidden relative"
+                            className="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-sm shadow-2xl overflow-hidden relative"
                         >
-                            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
-
                             <div className="flex flex-col lg:flex-row min-h-[700px]">
                                 {/* Copy-side */}
                                 <div className="p-8 md:p-16 lg:w-2/5 flex flex-col justify-center bg-white/5 relative border-b lg:border-b-0 lg:border-r border-white/10">
@@ -225,7 +223,7 @@ export default function ContactPage() {
                                 </div>
 
                                 {/* Form-side - Strong Glassmorphism */}
-                                <div className="lg:w-3/5 relative p-4 md:p-10 bg-white/5">
+                                <div className="lg:w-3/5 relative p-4 md:p-10">
                                     <div className="h-[750px] md:h-[800px] w-full border border-white/20 rounded-sm overflow-hidden bg-white/5 shadow-2xl relative backdrop-blur-md">
                                         <div className="absolute inset-0 z-10 pointer-events-none border-[8px] border-white/5 rounded-sm"></div>
                                         <iframe

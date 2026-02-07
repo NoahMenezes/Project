@@ -33,7 +33,6 @@ export default function EliteClubPage() {
                     <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-8 tracking-tight">Copperleaf Elite Club</h1>
 
                     <div className="bg-amber-600/10 backdrop-blur-md border border-amber-600/30 p-8 rounded-sm mb-12 max-w-3xl mx-auto shadow-2xl relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
                         <p className="text-amber-400 font-bold tracking-wide text-sm leading-relaxed">
                             NOTE: We are currently NOT accepting BLUE Membership requests till further notice. If you are an existing BLUE Member and your membership is still active, kindly continue to use the benefits.
                         </p>

@@ -53,7 +53,6 @@ export default function ReservationsPage() {
                         </div>
 
                         <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-sm shadow-2xl relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
                             <h3 className="text-3xl font-serif text-white mb-4 italic">PRIVATE EVENTS</h3>
                             <p className="text-gray-300 font-light leading-relaxed mb-8">
                                 Looking for an ideal venue? Look no further. From corporate power lunches to cherished family reunions, our dedicated event spaces are designed to host your most important moments with elegance and style.
@@ -64,7 +63,6 @@ export default function ReservationsPage() {
                         </div>
 
                         <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-sm shadow-2xl relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
                             <h3 className="text-3xl font-serif text-white mb-6 italic">OPEN HOURS</h3>
                             <div className="text-gray-300 font-light space-y-4">
                                 <div className="flex justify-between items-center border-b border-white/5 pb-4">
