@@ -76,40 +76,39 @@ function LocationsContent() {
                     </button>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-8 mb-20 items-stretch">
+                <div className="max-w-4xl mx-auto mb-20">
                     <div className="bg-white/5 backdrop-blur-md p-8 md:p-12 border border-white/10 rounded-sm">
                         <h2 className="text-3xl font-serif text-amber-500 mb-6">{locations[activeLocation as keyof typeof locations].title}</h2>
-                        <p className="text-lg text-gray-300 leading-relaxed font-light mb-8">
+                        <p className="text-lg text-gray-300 leading-relaxed font-light">
                             {locations[activeLocation as keyof typeof locations].description}
                         </p>
-                    </div>
 
-                    <div className="h-[500px] w-full border border-white/10 rounded-sm overflow-hidden bg-black/40">
-                        <Map
-                            center={[locations[activeLocation as keyof typeof locations].lng, locations[activeLocation as keyof typeof locations].lat] as [number, number]}
-                            zoom={14}
-                        >
-                            {Object.entries(locations).map(([key, loc]) => (
-                                <MapMarker
-                                    key={key}
-                                    longitude={loc.lng}
-                                    latitude={loc.lat}
+                        {activeLocation === 'Panaji' && (
+                            <div className="h-[500px] w-full border border-white/10 rounded-sm overflow-hidden bg-black/40 mt-12 animate-in fade-in slide-in-from-bottom-5 duration-1000">
+                                <Map
+                                    center={[locations.Panaji.lng, locations.Panaji.lat] as [number, number]}
+                                    zoom={15}
                                 >
-                                    <MarkerContent>
-                                        <div className={`size-4 rounded-full border-2 border-white shadow-lg transition-colors ${activeLocation === key ? 'bg-amber-500' : 'bg-gray-500'}`} />
-                                    </MarkerContent>
-                                    <MarkerTooltip>{loc.title}</MarkerTooltip>
-                                    <MarkerPopup>
-                                        <div className="space-y-1 p-2 bg-black/90 text-white rounded-sm border border-amber-500/20">
-                                            <p className="font-medium text-amber-500">{loc.title}</p>
-                                            <p className="text-xs opacity-70">
-                                                {loc.lat.toFixed(4)}, {loc.lng.toFixed(4)}
-                                            </p>
-                                        </div>
-                                    </MarkerPopup>
-                                </MapMarker>
-                            ))}
-                        </Map>
+                                    <MapMarker
+                                        longitude={locations.Panaji.lng}
+                                        latitude={locations.Panaji.lat}
+                                    >
+                                        <MarkerContent>
+                                            <div className="size-5 rounded-full border-2 border-white shadow-lg bg-amber-500 animate-pulse" />
+                                        </MarkerContent>
+                                        <MarkerTooltip>{locations.Panaji.title}</MarkerTooltip>
+                                        <MarkerPopup>
+                                            <div className="space-y-1 p-2 bg-black/90 text-white rounded-sm border border-amber-500/20">
+                                                <p className="font-medium text-amber-500">{locations.Panaji.title}</p>
+                                                <p className="text-xs opacity-70">
+                                                    Visit Us in Panaji
+                                                </p>
+                                            </div>
+                                        </MarkerPopup>
+                                    </MapMarker>
+                                </Map>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
