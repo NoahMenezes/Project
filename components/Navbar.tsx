@@ -49,6 +49,24 @@ export default function Navbar() {
                                 </div>
                             );
                         }
+                        if (item === "OUR COMPANY") {
+                            return (
+                                <div key={item} className="relative group py-2">
+                                    <button className="text-xs font-medium tracking-widest text-white/80 group-hover:text-amber-400 transition uppercase flex items-center gap-1">
+                                        {item}
+                                        <svg className="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                                    </button>
+                                    <div className="absolute top-full left-0 mt-2 w-48 bg-black/90 backdrop-blur-xl border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-sm">
+                                        <Link
+                                            href="/accolades"
+                                            className="block px-6 py-4 text-xs tracking-widest text-white/70 hover:text-amber-400 hover:bg-white/5 transition uppercase"
+                                        >
+                                            Accolades
+                                        </Link>
+                                    </div>
+                                </div>
+                            );
+                        }
                         return (
                             <Link
                                 key={item}
