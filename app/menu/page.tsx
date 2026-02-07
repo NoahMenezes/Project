@@ -5,10 +5,9 @@ import Footer from '@/components/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const menuOptions = [
-    { id: 'food', label: 'Food', video: '/fire-mastery.mp4' },
-    { id: 'bar', label: 'Bar', video: '/edible-art.mp4' },
-    { id: 'delivery', label: 'Delivery', video: '/sourced-daily.mp4' },
-    { id: 'takeaway', label: 'Takeaway', video: '/background-video.mp4' }
+    { id: 'food', label: 'Food Menu', video: '/fire-mastery.mp4', link: 'https://drive.google.com/file/d/1CSwvym-7QbmMEA7fJNbLKw5j4Vh3WGoH/preview' },
+    { id: 'bar', label: 'Bar Menu', video: '/edible-art.mp4', link: 'https://drive.google.com/file/d/1LI3i82jZe3FsG_L_gSEOr9_bOhMW9q9z/preview' },
+    { id: 'delivery', label: 'Delivery & Menu', video: '/sourced-daily.mp4', link: 'https://docs.google.com/forms/d/e/1FAIpQLSe4R0PqqxkFAiQx9YPOjTFu6uOITvoBusKe34kY6JmKk3JvLQ/viewform?embedded=true' }
 ];
 
 export default function MenuPage() {
@@ -69,22 +68,16 @@ export default function MenuPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full max-w-5xl md:h-[800px] h-[600px] border border-white/10 rounded-3xl bg-white/5 backdrop-blur-sm flex items-center justify-center mb-20 overflow-hidden"
+                    className="w-full max-w-5xl md:h-[900px] h-[700px] border border-white/10 rounded-3xl bg-white/5 backdrop-blur-sm flex items-center justify-center mb-20 overflow-hidden shadow-2xl"
                 >
-                    {activeOption.id === 'delivery' ? (
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSe4R0PqqxkFAiQx9YPOjTFu6uOITvoBusKe34kY6JmKk3JvLQ/viewform?embedded=true"
-                            className="w-full h-full border-none"
-                            title="Delivery Form"
-                        >
-                            Loading…
-                        </iframe>
-                    ) : (
-                        <div className="text-center text-gray-400">
-                            <p className="text-xl font-serif italic mb-2">{activeOption.label} Menu</p>
-                            <p className="text-sm tracking-widest uppercase opacity-50">Coming Soon</p>
-                        </div>
-                    )}
+                    <iframe
+                        src={(activeOption as any).link}
+                        className="w-full h-full border-none"
+                        title={activeOption.label}
+                        allow="autoplay"
+                    >
+                        Loading…
+                    </iframe>
                 </motion.div>
 
             </div>
