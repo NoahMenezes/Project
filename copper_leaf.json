@@ -768,6 +768,11 @@
             "HOURS",
             "MORE INFO"
         ],
+        "menu_links": {
+            "food_drive": "https://drive.google.com/file/d/1CSwvym-7QbmMEA7fJNbLKw5j4Vh3WGoH/view",
+            "bar_drive": "https://drive.google.com/file/d/1LI3i82jZe3FsG_L_gSEOr9_bOhMW9q9z/view",
+            "delivery_form": "https://docs.google.com/forms/d/e/1FAIpQLSe4R0PqqxkFAiQx9YPOjTFu6uOITvoBusKe34kY6JmKk3JvLQ/viewform"
+        },
         "paragraphs": [
             "FOR ENQUIRIES: +91 90750 18460 / +91 91750 18461 JOIN NOW",
             "Food Menu",
