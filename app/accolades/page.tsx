@@ -74,6 +74,41 @@ const awards = [
         organization: "Times Food Delivery Icons",
         issuer: "Times Group",
         description: "Recognized for excellence in multi-cuisine offerings and reliable delivery standards."
+    },
+    {
+        year: "2019",
+        title: "Certificate of Excellence",
+        organization: "Tripadvisor",
+        issuer: "Tripadvisor",
+        description: "Awarded for consistently delivering a superior customer experience and high-quality service."
+    },
+    {
+        year: "2019",
+        title: "50 Best Restaurants & Bars",
+        organization: "Best Restaurant",
+        issuer: "CEO Insights",
+        description: "Recognized as one of the 50 best dining and bar establishments for quality and innovation."
+    },
+    {
+        year: "2019",
+        title: "Excellence in Hotel Industry",
+        organization: "Gomantak Excellence Awards",
+        issuer: "Gomantak",
+        description: "Celebrating outstanding contributions and excellence within the Goa hospitality sector."
+    },
+    {
+        year: "2018",
+        title: "Certificate of Excellence",
+        organization: "Tripadvisor",
+        issuer: "Tripadvisor",
+        description: "Honored for maintaining exceptional service standards and positive guest feedback."
+    },
+    {
+        year: "2017",
+        title: "Certificate of Excellence",
+        organization: "Tripadvisor",
+        issuer: "Tripadvisor",
+        description: "Recognized early in our journey for commitment to hospitality and dining excellence."
     }
 ];
 
