@@ -3,8 +3,8 @@ These pages are explicitly referenced in your data but do not exist in your app/
 
 Careers Page (/careers): [DONE] - Premium careers landing page created with categorized job roles and HR WhatsApp/Call integration.
 News Page (/news): [DONE] - Latest news landing page with award updates and social media profile integration.
-Gallery Page (/gallery): The data specifies a "Gallery/Arcade" with both "VIDEOS" and "PHOTOS" sections.
-Corporate Discount Dedicated Page (/corporatediscount): While you have a section on the programs page, the JSON lists a primary URL for this, suggesting it should be a standalone landing page for B2B tie-ups.
+Gallery Page (/gallery): [DONE] - Placeholder gallery created.
+Corporate Discount Dedicated Page (/corporate-discount): [DONE] - Full landing page with program details and enrollment form.
 FB Data Deletion Instructions: Legally required for Facebook integrations mentioned in your "More Info" footer data.
 AR Menu App Privacy Policy: The JSON specifically mentions a privacy policy for a "Copperleaf AR Menu App".
 📖 2. Content Gaps (On Existing Pages)

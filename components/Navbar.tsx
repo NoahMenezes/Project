@@ -67,6 +67,12 @@ export default function Navbar() {
                                         >
                                             Porvorim
                                         </Link>
+                                        <Link
+                                            href="/gallery"
+                                            className="block px-6 py-4 text-xs tracking-widest text-white/70 hover:text-amber-400 hover:bg-white/5 transition uppercase border-t border-white/5"
+                                        >
+                                            Gallery
+                                        </Link>
                                     </div>
                                 </div>
                             );
@@ -143,7 +149,9 @@ export default function Navbar() {
                                                             ? '/#story'
                                                             : item === 'CONTACT'
                                                                 ? '/contact'
-                                                                : '#'
+                                                                : item === 'CORPORATE DISCOUNT'
+                                                                    ? '/corporate-discount'
+                                                                    : '#'
                                 }
                                 className="text-xs font-medium tracking-widest text-white/80 hover:text-amber-400 transition uppercase"
                             >
