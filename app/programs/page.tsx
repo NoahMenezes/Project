@@ -112,9 +112,12 @@ export default function ProgramsPage() {
                     className="text-center mb-24"
                 >
                     <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Our Special Initiatives</span>
-                    <h1 className="text-5xl md:text-8xl font-serif font-bold tracking-tight mb-6">Our Programs</h1>
-                    <p className="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl font-light leading-relaxed">
-                        Explore our various specialized discount and engagement programs designed to support our community and create meaningful connections.
+                    <h1 className="text-5xl md:text-8xl font-serif font-bold tracking-tight mb-8">Our Programs</h1>
+                    <p className="max-w-3xl mx-auto text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-6">
+                        Explore our various specialized discount and engagement programs designed to support our community, reward our corporate partners, and create meaningful connections with creators.
+                    </p>
+                    <p className="max-w-2xl mx-auto text-gray-400 text-base md:text-lg font-light leading-relaxed">
+                        From honoring our national heroes through dedicated discounts to fostering collaborations with social media influencers, Copperleaf is committed to being more than just a restaurant—we are a hub for engagement and appreciation.
                     </p>
                 </motion.div>
 

@@ -130,7 +130,7 @@ export default function Navbar() {
                                                         : item === 'OUR STORY'
                                                             ? '/#story'
                                                             : item === 'CONTACT'
-                                                                ? '/#contact'
+                                                                ? '/contact'
                                                                 : '#'
                                 }
                                 className="text-xs font-medium tracking-widest text-white/80 hover:text-amber-400 transition uppercase"

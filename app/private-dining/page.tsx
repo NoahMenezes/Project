@@ -90,9 +90,12 @@ export default function PrivateDiningPage() {
                     className="text-center mb-24"
                 >
                     <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Exclusive Experiences</span>
-                    <h1 className="text-5xl md:text-8xl font-serif font-bold tracking-tight mb-6">Private Dining</h1>
-                    <p className="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl font-light leading-relaxed">
-                        From intimate signature dining to grand corporate celebrations, discover our curated spaces designed for privacy, luxury, and the ultimate culinary journey.
+                    <h1 className="text-5xl md:text-8xl font-serif font-bold tracking-tight mb-8">Private Dining</h1>
+                    <p className="max-w-3xl mx-auto text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-6">
+                        Discover the epitome of hospitality within our curated private dining spaces. Tailored for those who seek exclusivity, intimacy, and a superior level of personalized service.
+                    </p>
+                    <p className="max-w-2xl mx-auto text-gray-400 text-base md:text-lg font-light leading-relaxed">
+                        Whether it’s the royal ambiance of Solitaire for intimate groups or the panoramic elegance of Infinity for grander social events, our spaces are designed to make every occasion a signature experience.
                     </p>
                 </motion.div>
 

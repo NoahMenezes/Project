@@ -180,9 +180,12 @@ export default function AccoladesPage() {
                     className="text-center mb-20"
                 >
                     <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Our Journey of Excellence</span>
-                    <h1 className="text-5xl md:text-8xl font-serif font-bold tracking-tight mb-6">Accolades</h1>
-                    <p className="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl font-light leading-relaxed">
-                        Since our inception in 2016, Copperleaf has been honored with numerous prestigious awards that reflect our commitment to culinary innovation and hospitality excellence.
+                    <h1 className="text-5xl md:text-8xl font-serif font-bold tracking-tight mb-8">Accolades</h1>
+                    <p className="max-w-3xl mx-auto text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-8">
+                        Since our inception in 2016, Copperleaf has been honored with numerous prestigious awards that reflect our commitment to culinary innovation and hospitality excellence. Each award represents our unwavering dedication to providing an "Ultimate Dining Experience."
+                    </p>
+                    <p className="max-w-2xl mx-auto text-gray-400 text-base md:text-lg font-light leading-relaxed">
+                        From being recognized as the best seafood destination to winning multi-cuisine casual dining honors, our journey is a testament to the passion of our culinary team and the loyalty of our patrons across Goa and beyond.
                     </p>
                 </motion.div>
 
