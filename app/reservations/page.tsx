@@ -57,7 +57,30 @@ export default function ReservationsPage() {
                                 </p>
                                 <div className="pt-4">
                                     <div className="w-12 h-1 bg-amber-500 mb-6"></div>
-                                    <p className="text-amber-500 font-bold uppercase tracking-widest text-sm">Experience the Ultimate Dining</p>
+                                    <p className="text-amber-500 font-bold uppercase tracking-widest text-xs mb-8">Experience the Ultimate Dining</p>
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <a
+                                            href="https://api.whatsapp.com/send/?phone=919175018461&text=Hi+Copperleaf!+I'd+like+to+make+a+reservation+at+Panaji&type=phone_number&app_absent=0"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="bg-white/5 backdrop-blur-md p-6 border border-white/10 rounded-sm hover:border-amber-500/50 transition-all duration-300 group"
+                                        >
+                                            <h4 className="text-amber-500 font-bold text-[10px] tracking-[0.2em] uppercase mb-2">Panaji Outlet</h4>
+                                            <p className="text-white font-serif italic text-xl">+91 91750 18461</p>
+                                            <p className="text-[10px] text-gray-500 mt-2 uppercase tracking-widest group-hover:text-amber-500 transition-colors">Instant WhatsApp Reservation</p>
+                                        </a>
+                                        <a
+                                            href="https://api.whatsapp.com/send/?phone=917558298641&text=Hi+Copperleaf!+I'd+like+to+make+a+reservation+at+Porvorim&type=phone_number&app_absent=0"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="bg-white/5 backdrop-blur-md p-6 border border-white/10 rounded-sm hover:border-amber-500/50 transition-all duration-300 group"
+                                        >
+                                            <h4 className="text-amber-500 font-bold text-[10px] tracking-[0.2em] uppercase mb-2">Porvorim Outlet</h4>
+                                            <p className="text-white font-serif italic text-xl">+91 75582 98641</p>
+                                            <p className="text-[10px] text-gray-500 mt-2 uppercase tracking-widest group-hover:text-amber-500 transition-colors">Instant WhatsApp Reservation</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

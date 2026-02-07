@@ -67,18 +67,61 @@ export default function AboutPage() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-24"
                 >
-                    <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Our Story</span>
+                    <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Our Legacy</span>
                     <h1 className="text-5xl md:text-8xl font-serif font-bold tracking-tight mb-8">Who are we?</h1>
 
                     <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-3xl border border-white/10 p-8 md:p-12 rounded-sm shadow-2xl">
-                        <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic border-l-4 border-amber-500 pl-8 mb-8">
+                        <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed italic border-l-4 border-amber-500 pl-8 mb-10">
                             VISHWAMUKTA is a multi-business venture comprising of Hotels, Restaurants, Real Estate, Educational, and IT businesses.
                         </p>
-                        <p className="text-lg text-gray-400 font-light leading-relaxed text-left">
-                            VM was founded by Shreekant V. Pai Bir, Sachin S. Pai Bir, and Vishwanath S. Pai Bir in 2002 to venture into the hospitality business. The business was started with the management of Hotel Blessings in Panaji, Goa and now comprises of Copperleaf Multi-Cuisine Fine Dining Restaurant located at Porvorim and Panaji, Omkar Developers, VMPL, VME, and Megalon.
-                        </p>
+                        <div className="text-lg text-gray-400 font-light leading-relaxed text-left space-y-6">
+                            <p>
+                                VM was founded by Shreekant V. Pai Bir, Sachin S. Pai Bir, and Vishwanath S. Pai Bir in 2002 to venture into the hospitality business. The business was started with the management of Hotel Blessings in Panaji, Goa and now comprises of Copperleaf Multi-Cuisine Fine Dining Restaurant located at Porvorim and Panaji, Omkar Developers, VMPL, VME, and Megalon.
+                            </p>
+                            <p>
+                                Copperleaf, Goa’s Favourite Restaurant, opened its first outlet in Porvorim in 2016 and its second outlet in Panaji in 2021. Since its inception, we have been privileged to serve more than 1.3+ million (13+ lacs) customers. Our mission is to celebrate the abundance of flavors as family and friends gather to enjoy a great meal together.
+                            </p>
+                        </div>
                     </div>
                 </motion.div>
+
+                {/* Our Mission & Philosophy */}
+                <section className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="space-y-8"
+                    >
+                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-white tracking-tight italic">Behind the Scenes</h2>
+                        <div className="w-20 h-1 bg-amber-500"></div>
+                        <div className="space-y-6 text-gray-300 font-light leading-relaxed text-lg">
+                            <p>
+                                Our stewards are trained to guide you through a choice of vegetarian or non-vegetarian options and the various levels of spices, while our kitchens blend rich culinary instincts seamlessly to dish out a one-of-a-kind dining experience for you, every time!
+                            </p>
+                            <p>
+                                The team at Copperleaf give it their best to serve perfection at your table every time your order comes in. We promise to tantalize your taste buds with our delicious food and create a feast for your eyes and senses.
+                            </p>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="relative h-[500px] border border-white/10 rounded-sm overflow-hidden"
+                    >
+                        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+                            <source src="/fire-mastery.mp4" type="video/mp4" />
+                        </video>
+                        <div className="absolute inset-0 bg-black/30" />
+                        <div className="absolute inset-0 flex items-center justify-center p-12">
+                            <p className="text-3xl md:text-4xl font-serif font-bold text-white text-center italic drop-shadow-2xl">
+                                "Celebrating the abundance of flavors"
+                            </p>
+                        </div>
+                    </motion.div>
+                </section>
 
                 {/* Executive Team */}
                 <section className="mb-32">
@@ -86,8 +129,8 @@ export default function AboutPage() {
                         <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">FOUNDERS</h2>
                         <p className="text-amber-500 font-bold tracking-[0.2em] uppercase text-xs">Executive Team</p>
                         <div className="w-16 h-1 bg-amber-500 mx-auto mt-6"></div>
-                        <p className="text-gray-400 mt-8 max-w-2xl mx-auto font-light">
-                            VISHWAMUKTA Group is guided by Mr. Shreekant V. Pai Bir and led by Mr. Sachin S. Pai Bir & Mr. Vishwanath S. Pai Bir.
+                        <p className="text-gray-400 mt-8 max-w-2xl mx-auto font-light leading-relaxed">
+                            VISHWAMUKTA Group is guided by Mr. Shreekant V. Pai Bir and led by Mr. Sachin S. Pai Bir & Mr. Vishwanath S. Pai Bir. Our team of more than 200+ people in Goa works with a common ideology to transform the Hospitality Industry.
                         </p>
                     </div>
 
@@ -128,7 +171,7 @@ export default function AboutPage() {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
 
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 italic">What makes us different?</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 italic">The Copperleaf Promise</h2>
                         <div className="w-12 h-1 bg-amber-500 mx-auto"></div>
                     </div>
 
@@ -162,9 +205,9 @@ export default function AboutPage() {
                     <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 blur-[80px] -mr-32 -mt-32" />
 
                     <span className="text-amber-500 font-bold tracking-[0.4em] uppercase text-xs mb-6 block">DISCOVER</span>
-                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-10 tracking-tight italic">Copperleaf Panaji</h2>
+                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-10 tracking-tight italic">Unforgettable Memories</h2>
                     <p className="text-xl text-gray-400 font-light max-w-3xl mx-auto leading-relaxed mb-12">
-                        For a truly memorable dining experience, cuisine and atmosphere are paired as thoughtfully as food and wine.
+                        Relish the famous Copperleaf Fish Thali and enjoy traditional Goan food alongside a global palette of flavors. So that each of our preparations becomes an experience for you to cherish.
                     </p>
                 </motion.div>
             </div>

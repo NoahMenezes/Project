@@ -25,18 +25,27 @@ const contactOptions = [
                     <p className="text-gray-400 font-light leading-relaxed">
                         For parties larger than 10, or specific seating requests like our Private Dining rooms (Solitaire or 10@Infinity), please call our outlets directly or mention your preference in the special requests section of the form.
                     </p>
-                    <div className="bg-black/40 p-6 border border-white/10 rounded-sm">
-                        <h4 className="text-amber-500 font-bold text-xs tracking-[0.3em] uppercase mb-4">Operating Hours</h4>
-                        <div className="grid grid-cols-2 gap-4">
-                            <div>
-                                <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Lunch Service</p>
-                                <p className="text-white font-serif italic text-lg">11:30 AM - 3:30 PM</p>
-                            </div>
-                            <div>
-                                <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Dinner Service</p>
-                                <p className="text-white font-serif italic text-lg">7:00 PM - 11:00 PM</p>
-                            </div>
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=919175018461&text=Hi+Copperleaf!+I'd+like+to+make+a+reservation+at+Panaji&type=phone_number&app_absent=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-black/40 p-4 border border-white/10 rounded-sm hover:border-amber-500/50 transition-all duration-300 group"
+                        >
+                            <h4 className="text-amber-500 font-bold text-[10px] tracking-[0.2em] uppercase mb-2">Panaji Outlet</h4>
+                            <p className="text-white font-serif italic">+91 91750 18461</p>
+                            <p className="text-[10px] text-gray-500 mt-2 uppercase tracking-widest group-hover:text-amber-500 transition-colors">WhatsApp Now</p>
+                        </a>
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=917558298641&text=Hi+Copperleaf!+I'd+like+to+make+a+reservation+at+Porvorim&type=phone_number&app_absent=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-black/40 p-4 border border-white/10 rounded-sm hover:border-amber-500/50 transition-all duration-300 group"
+                        >
+                            <h4 className="text-amber-500 font-bold text-[10px] tracking-[0.2em] uppercase mb-2">Porvorim Outlet</h4>
+                            <p className="text-white font-serif italic">+91 75582 98641</p>
+                            <p className="text-[10px] text-gray-500 mt-2 uppercase tracking-widest group-hover:text-amber-500 transition-colors">WhatsApp Now</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -146,12 +155,22 @@ const contactOptions = [
                 </div>
 
                 <div className="space-y-4">
-                    <p className="text-gray-400 font-light text-sm leading-relaxed">
+                    <p className="text-gray-400 font-light leading-relaxed text-sm">
                         Explore our Multi-Cuisine options including traditional Goan delicacies, North Indian classics, and International favorites, all prepared with the freshest ingredients.
                     </p>
-                    <Link href="/menu" className="inline-block px-8 py-3 bg-white/5 border border-white/10 hover:bg-amber-600 hover:border-amber-600 text-white transition-all duration-300 text-xs font-bold tracking-[0.3em] uppercase rounded-sm">
-                        Open Digital Menu
-                    </Link>
+                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                        <Link href="/menu" className="flex-1 text-center px-6 py-4 bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-all duration-300 text-[10px] font-bold tracking-[0.3em] uppercase rounded-sm">
+                            Digital Menu
+                        </Link>
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=919175018461&text=Hi+Copperleaf!+I'm+inquiring+about+the+Menu&type=phone_number&app_absent=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 text-center px-6 py-4 bg-emerald-600/80 hover:bg-emerald-600 text-white transition-all duration-300 text-[10px] font-bold tracking-[0.3em] uppercase rounded-sm shadow-xl"
+                        >
+                            WhatsApp Inquiry
+                        </a>
+                    </div>
                 </div>
             </div>
         )

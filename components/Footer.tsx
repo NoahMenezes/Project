@@ -87,9 +87,24 @@ export default function Footer() {
                             {restaurantData.footer.contact.title}
                         </h5>
                         <div className="text-white/90 font-light leading-relaxed space-y-2">
-                            {restaurantData.footer.contact.lines.map((line, i) => (
-                                <p key={i} className="text-sm md:text-base hover:text-amber-400 transition-colors cursor-default">{line}</p>
-                            ))}
+                            {restaurantData.footer.contact.lines.map((line, i) => {
+                                if (line.includes('@')) {
+                                    return (
+                                        <a key={i} href={`mailto:${line}`} className="block text-sm md:text-base hover:text-amber-400 transition-colors">
+                                            {line}
+                                        </a>
+                                    );
+                                }
+                                if (line.startsWith('+91')) {
+                                    const waLink = line.includes('91750') ? restaurantData.footer.contact.whatsapp[0] : restaurantData.footer.contact.whatsapp[1];
+                                    return (
+                                        <a key={i} href={waLink} target="_blank" rel="noopener noreferrer" className="block text-sm md:text-base hover:text-amber-400 transition-colors">
+                                            {line}
+                                        </a>
+                                    );
+                                }
+                                return <p key={i} className="text-sm md:text-base">{line}</p>;
+                            })}
                         </div>
                     </motion.div>
                 </div>
@@ -104,6 +119,9 @@ export default function Footer() {
                     <div className="flex gap-10">
                         <Link href="/about" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
                             About Us
+                        </Link>
+                        <Link href="/careers" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
+                            Careers
                         </Link>
                         <a
                             href={(restaurantData as any).termsDriveLink}

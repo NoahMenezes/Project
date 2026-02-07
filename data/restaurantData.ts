@@ -133,7 +133,11 @@ export const restaurantData = {
         },
         contact: {
             title: "Contact",
-            lines: ["eat@copperleafgoa.com", "+91 91750 18461", "+91 75582 98641"]
+            lines: ["eat@copperleafgoa.com", "+91 91750 18461", "+91 75582 98641"],
+            whatsapp: [
+                "https://api.whatsapp.com/send/?phone=919175018461&text=Hi+Copperleaf!+I'd+like+to+make+an+inquiry&type=phone_number&app_absent=0",
+                "https://api.whatsapp.com/send/?phone=917558298641&text=Hi+Copperleaf!+I'd+like+to+make+an+inquiry&type=phone_number&app_absent=0"
+            ]
         },
         copyright: "© 2026 Copperleaf. All rights reserved."
     }

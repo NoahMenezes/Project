@@ -110,6 +110,18 @@ export default function Navbar() {
                                         >
                                             Private Dining
                                         </Link>
+                                        <Link
+                                            href="/careers"
+                                            className="block px-6 py-4 text-xs tracking-widest text-white/70 hover:text-amber-400 hover:bg-white/5 transition uppercase border-t border-white/5"
+                                        >
+                                            Careers
+                                        </Link>
+                                        <Link
+                                            href="/news"
+                                            className="block px-6 py-4 text-xs tracking-widest text-white/70 hover:text-amber-400 hover:bg-white/5 transition uppercase border-t border-white/5"
+                                        >
+                                            News
+                                        </Link>
                                     </div>
                                 </div>
                             );

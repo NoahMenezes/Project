@@ -150,15 +150,23 @@ export default function PrivateDiningPage() {
                                         ))}
                                     </ul>
 
-                                    <div className="pt-8">
+                                    <div className="pt-8 flex flex-wrap gap-4">
                                         <Link
                                             href={option.ctaLink}
                                             target="_blank"
-                                            className="inline-flex items-center justify-center px-10 py-4 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold tracking-[0.3em] uppercase transition-all duration-300 rounded-sm group"
+                                            className="inline-flex items-center justify-center px-10 py-4 border border-white/20 hover:bg-white hover:text-black text-white text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-300 rounded-sm group"
                                         >
-                                            Book This Experience
+                                            Inquiry Form
                                             <svg className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                                         </Link>
+                                        <a
+                                            href={`https://api.whatsapp.com/send/?phone=919175018461&text=Hi+Copperleaf!+I'm+interested+in+booking+the+${encodeURIComponent(option.title)}+Private+Dining+Experience&type=phone_number&app_absent=0`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center justify-center px-10 py-4 bg-emerald-600/90 hover:bg-emerald-600 text-white text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-300 rounded-sm shadow-lg shadow-emerald-900/20"
+                                        >
+                                            WhatsApp Booking
+                                        </a>
                                     </div>
                                 </div>
                             </div>

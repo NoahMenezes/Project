@@ -48,7 +48,7 @@ export default function EliteClubPage() {
                             NOTE: We are currently NOT accepting BLUE Membership requests till further notice. If you are an existing BLUE Member and your membership is still active, kindly continue to use the benefits.
                         </p>
                         <p className="text-amber-400/80 text-xs mt-4 leading-relaxed font-light">
-                            If your membership is about to expire or already expired, kindly contact our team. Please ensure you renew your memberships on or before the expiration date to maintain your status.
+                            If your membership is about to expire or already expired, kindly <a href="https://api.whatsapp.com/send/?phone=919175018461&text=Hi+Copperleaf!+I'm+inquiring+about+my+Elite+Club+Membership+Renewal&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">contact our team</a>. Please ensure you renew your memberships on or before the expiration date to maintain your status.
                         </p>
                     </div>
 
