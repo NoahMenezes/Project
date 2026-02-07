@@ -11,13 +11,13 @@ export default function TermsAndConditions() {
 
             {/* Background Video */}
             <div className="fixed inset-0 z-0">
-                <div className="absolute inset-0 bg-black/80 z-10"></div>
+                <div className="absolute inset-0 bg-black/40 z-10"></div>
                 <video
                     autoPlay
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover opacity-20"
+                    className="w-full h-full object-cover opacity-60"
                 >
                     <source src="/fire-mastery.mp4" type="video/mp4" />
                 </video>

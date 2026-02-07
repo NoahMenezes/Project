@@ -9,19 +9,62 @@ const founders = [
         name: "Shreekant V. Pai Bir",
         title: "DIRECTOR / CHAIRMAN",
         bio: "A retired SBI banker, has been in the hospitality business in the initial years but he found his connect with the restaurant industry and has been in this sector for the last 20+ years. He is the father and mainly a guide to Sachin Pai Bir & Vishwanath Pai Bir. He is an alumnus of Bombay University.",
-        image: "/about/shreekant.jpg"
+        image: ""
     },
     {
         name: "Sachin S. Pai Bir",
         title: "DIRECTOR / CEO",
         bio: "Copperleaf is the brainchild of Sachin S. Pai Bir, who despite graduating as a Master of Engineering (ME) found his true calling in the Restaurant & Hotel industry and is passionately involved in it for the last 20+ years. He is the pioneer in setting trends in the restaurant industry & tirelessly transforming the Hospitality Industry. He is an alumnus of Goa College of Engineering (GEC) affiliated to Goa University.",
-        image: "/about/sachin.jpg"
+        image: ""
     },
     {
         name: "Vishwanath S. Pai Bir",
         title: "DIRECTOR / COO",
         bio: "Vishwanath is an engineer by profession with a Master of Science in IT Project Management from the United States. He has a wealth of experience in the IT industry, from startups to large corporations. Vishwanath was indirectly involved in the business since its inception, but after 11 years in the US, he decided to leave his six-figure IT job to focus on the business full-time. He is an alumnus of Goa College of Engineering (GEC), which is affiliated with Goa University.",
-        image: "/about/vishwanath.jpg"
+        image: ""
+    }
+];
+
+const subsidiaries = [
+    {
+        name: "Omkar Developers",
+        sector: "Real Estate",
+        description: "Specializing in high-quality residential and commercial developments across Goa, setting benchmarks in construction excellence.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+        )
+    },
+    {
+        name: "VMPL",
+        sector: "Hospitality",
+        description: "Driving growth in the hospitality sector with a focus on premium service and operational excellence.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+        )
+    },
+    {
+        name: "VME",
+        sector: "Education",
+        description: "Dedicated to educational initiatives and knowledge empowerment, contributing to the academic growth of the region.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+        )
+    },
+    {
+        name: "Megalon",
+        sector: "Information Technology",
+        description: "Our innovative IT wing dedicated to digital transformation, software solutions, and cutting-edge technology services.",
+        icon: (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+        )
     }
 ];
 
@@ -76,10 +119,13 @@ export default function AboutPage() {
                         </p>
                         <div className="text-lg text-gray-400 font-light leading-relaxed text-left space-y-6">
                             <p>
-                                VM was founded by Shreekant V. Pai Bir, Sachin S. Pai Bir, and Vishwanath S. Pai Bir in 2002 to venture into the hospitality business. The business was started with the management of Hotel Blessings in Panaji, Goa and now comprises of Copperleaf Multi-Cuisine Fine Dining Restaurant located at Porvorim and Panaji, Omkar Developers, VMPL, VME, and Megalon.
+                                VM was founded by <span className="text-white font-medium">Shreekant V. Pai Bir, Sachin S. Pai Bir, and Vishwanath S. Pai Bir</span> in 2002 to venture into the hospitality business. The journey began in <span className="text-white font-bold">2002</span> with the management of <span className="text-amber-500 font-medium tracking-wider">Hotel Blessings</span> in Panaji, Goa, which served as the group's starting point and foundation for excellence.
                             </p>
                             <p>
-                                Copperleaf, Goa’s Favourite Restaurant, opened its first outlet in Porvorim in 2016 and its second outlet in Panaji in 2021. Since its inception, we have been privileged to serve more than 1.3+ million (13+ lacs) customers. Our mission is to celebrate the abundance of flavors as family and friends gather to enjoy a great meal together.
+                                Today, the group has evolved into a powerhouse comprising of <span className="text-amber-500 font-medium">Copperleaf</span> Multi-Cuisine Fine Dining Restaurant (Porvorim & Panaji), <span className="text-white">Omkar Developers, VMPL, VME, and Megalon</span>.
+                            </p>
+                            <p>
+                                Copperleaf, Goa’s Favourite Restaurant, opened its first outlet in Porvorim in 2016 and its second outlet in Panaji in 2021. Since its inception, we have been privileged to serve more than <span className="text-white font-bold tracking-widest">1.3+ MILLION</span> customers. Our mission is to celebrate the abundance of flavors as family and friends gather to enjoy a great meal together.
                             </p>
                         </div>
                     </div>
@@ -123,6 +169,37 @@ export default function AboutPage() {
                     </motion.div>
                 </section>
 
+                {/* Group Portfolio Section */}
+                <section className="mb-32">
+                    <div className="text-center mb-16">
+                        <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Our Reach</span>
+                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">GROUP PORTFOLIO</h2>
+                        <div className="w-16 h-1 bg-amber-500 mx-auto mt-6"></div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {subsidiaries.map((sub, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-sm hover:border-amber-500/50 transition-all duration-500 group"
+                            >
+                                <div className="text-amber-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    {sub.icon}
+                                </div>
+                                <h3 className="text-xl font-serif font-bold text-white mb-2">{sub.name}</h3>
+                                <p className="text-amber-500/80 text-[10px] font-bold tracking-widest uppercase mb-4">{sub.sector}</p>
+                                <p className="text-gray-400 font-light text-sm leading-relaxed">
+                                    {sub.description}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+
                 {/* Executive Team */}
                 <section className="mb-32">
                     <div className="text-center mb-16">
@@ -130,7 +207,7 @@ export default function AboutPage() {
                         <p className="text-amber-500 font-bold tracking-[0.2em] uppercase text-xs">Executive Team</p>
                         <div className="w-16 h-1 bg-amber-500 mx-auto mt-6"></div>
                         <p className="text-gray-400 mt-8 max-w-2xl mx-auto font-light leading-relaxed">
-                            VISHWAMUKTA Group is guided by Mr. Shreekant V. Pai Bir and led by Mr. Sachin S. Pai Bir & Mr. Vishwanath S. Pai Bir. Our team of more than 200+ people in Goa works with a common ideology to transform the Hospitality Industry.
+                            VISHWAMUKTA Group is guided by Mr. Shreekant V. Pai Bir and led by Mr. Sachin S. Pai Bir & Mr. Vishwanath S. Pai Bir. Our dedicated team of more than <span className="text-white font-medium">200+ professionals</span> in Goa works with a common ideology to transform the Hospitality Industry through excellence and innovation.
                         </p>
                     </div>
 
@@ -144,13 +221,22 @@ export default function AboutPage() {
                                 transition={{ delay: index * 0.2 }}
                                 className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-sm overflow-hidden flex flex-col group"
                             >
-                                <div className="h-[400px] relative overflow-hidden">
+                                <div className="h-[400px] relative overflow-hidden bg-white/5 flex items-center justify-center">
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
-                                    <img
-                                        src={founder.image}
-                                        alt={founder.name}
-                                        className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700"
-                                    />
+                                    {founder.image ? (
+                                        <img
+                                            src={founder.image}
+                                            alt={founder.name}
+                                            className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700"
+                                        />
+                                    ) : (
+                                        <div className="flex flex-col items-center opacity-20 group-hover:opacity-40 transition-opacity">
+                                            <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                            </svg>
+                                            <span className="text-[10px] tracking-widest uppercase mt-4">Portrait Pending</span>
+                                        </div>
+                                    )}
                                     <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/60 to-transparent">
                                         <h3 className="text-2xl font-serif font-bold text-white">{founder.name}</h3>
                                         <p className="text-amber-500 text-xs font-bold tracking-widest mt-1 uppercase">{founder.title}</p>
