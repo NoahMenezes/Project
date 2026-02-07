@@ -77,6 +77,41 @@ const awards = [
     },
     {
         year: "2019",
+        title: "Best Coastal Cuisine",
+        organization: "Franchise India Restaurant Awards",
+        issuer: "Franchise India",
+        description: "Honored for excellence in coastal flavors and traditional culinary authenticity."
+    },
+    {
+        year: "2019",
+        title: "Iconic Seafood Restaurant",
+        organization: "Times Hospitality Icons",
+        issuer: "Times Group",
+        description: "Recognized as a landmark destination for premium seafood in the region."
+    },
+    {
+        year: "2018",
+        title: "Goa State Best Brand Awards",
+        organization: "Brand Leadership Award",
+        issuer: "World CSR Day and CMO Asia",
+        description: "Recognized for outstanding brand leadership and commitment to excellence."
+    },
+    {
+        year: "2017",
+        title: "Award for Corporate Excellence",
+        organization: "Best in Indian Cuisine",
+        issuer: "Business Goa",
+        description: "Recognized for superior standards in Indian fine dining and corporate hospitality."
+    },
+    {
+        year: "2017",
+        title: "Goa Pride Award Winner",
+        organization: "The Best Goan Fish Thali",
+        issuer: "92.7 BIG FM",
+        description: "Voted as the ultimate destination for the most authentic and loved Goan Fish Thali."
+    },
+    {
+        year: "2019",
         title: "Certificate of Excellence",
         organization: "Tripadvisor",
         issuer: "Tripadvisor",
