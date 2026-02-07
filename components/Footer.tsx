@@ -46,9 +46,14 @@ export default function Footer() {
                     </p>
 
                     <div className="flex gap-6">
-                        <Link href="/terms" className="text-gray-500 hover:text-amber-500 text-xs tracking-widest uppercase transition-colors">
+                        <a
+                            href={(restaurantData as any).termsDriveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-500 hover:text-amber-500 text-xs tracking-widest uppercase transition-colors"
+                        >
                             Terms & Conditions
-                        </Link>
+                        </a>
                         <Link href="/terms" className="text-gray-500 hover:text-amber-500 text-xs tracking-widest uppercase transition-colors">
                             Privacy Policy
                         </Link>

@@ -4,6 +4,15 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useSearchParams } from 'next/navigation';
 
+import {
+    Map,
+    MapMarker,
+    MarkerContent,
+    MarkerPopup,
+    MarkerTooltip,
+} from "@/components/ui/map";
+import { restaurantData } from '@/data/restaurantData';
+
 function LocationsContent() {
     const searchParams = useSearchParams();
     const locParam = searchParams.get('loc');
@@ -19,10 +28,14 @@ function LocationsContent() {
         Porvorim: {
             title: "Copperleaf Porvorim",
             description: "Copperleaf Porvorim, is a multi-cuisine fine dining restaurant with a bar located on Chogm Road, Porvorim. Copperleaf Porvorim is the first outlet opened in 2016 with 180 seats. We have served more than 1.5 million (15 lacs) happy customers till date. Copperleaf has been awarded 19 awards at the State and National level in the last 6 years. The Porvorim outlet has 4 seating areas. The Pavillion is on the ground floor, Pepper on the mezzanine floor with a Private Dining Area – Mint – for 30 to 35 pax. Solaris is a new dining area located on the first floor for up to 50 pax. Porvorim outlet also offers Delivery & Takeaway services.",
+            lat: 15.5342,
+            lng: 73.8188
         },
         Panaji: {
             title: "Copperleaf Panaji",
             description: "Copperleaf Panaji, the second outlet opened in 2021 is located on the outskirts of Panaji on the St. Inez-Taleigao Road. Copperleaf Panaji is one of the biggest 300-seater Fine – Dining Restaurant, with spacious seating, spread across 10,000 sq. ft. of Ground & First Floors. It has two dining areas called Cilantro and Citrus on the ground floor. On the first floor there is Infinity dining area, Bellini seating bar, 10@Infinity Semi-Private Dining Room and Solitaire Signature Private Dining Room. It is an ideal location for Corporate Lunch / Dinner and all kinds of Celebrations – Birthdays, Anniversaries, Reunions, with a soothing atmosphere for families and groups. The facility includes 5 star Amenities, such as Splendid International Standard Washrooms, Wheelchair Accessible Entrance, Wheelchair Accessible Washrooms, Grab Bars in Washrooms as well as Baby Diaper / Nappy Changing Station. Panaji outlet also offers Delivery & Takeaway services.",
+            lat: 15.4821284,
+            lng: 73.8200714
         }
     };
 
@@ -63,11 +76,41 @@ function LocationsContent() {
                     </button>
                 </div>
 
-                <div className="bg-white/5 backdrop-blur-md p-8 md:p-12 border border-white/10 rounded-sm min-h-[400px]">
-                    <h2 className="text-3xl font-serif text-amber-500 mb-6">{locations[activeLocation as keyof typeof locations].title}</h2>
-                    <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-                        {locations[activeLocation as keyof typeof locations].description}
-                    </p>
+                <div className="grid lg:grid-cols-2 gap-8 mb-20 items-stretch">
+                    <div className="bg-white/5 backdrop-blur-md p-8 md:p-12 border border-white/10 rounded-sm">
+                        <h2 className="text-3xl font-serif text-amber-500 mb-6">{locations[activeLocation as keyof typeof locations].title}</h2>
+                        <p className="text-lg text-gray-300 leading-relaxed font-light mb-8">
+                            {locations[activeLocation as keyof typeof locations].description}
+                        </p>
+                    </div>
+
+                    <div className="h-[500px] w-full border border-white/10 rounded-sm overflow-hidden bg-black/40">
+                        <Map
+                            center={[locations[activeLocation as keyof typeof locations].lng, locations[activeLocation as keyof typeof locations].lat] as [number, number]}
+                            zoom={14}
+                        >
+                            {Object.entries(locations).map(([key, loc]) => (
+                                <MapMarker
+                                    key={key}
+                                    longitude={loc.lng}
+                                    latitude={loc.lat}
+                                >
+                                    <MarkerContent>
+                                        <div className={`size-4 rounded-full border-2 border-white shadow-lg transition-colors ${activeLocation === key ? 'bg-amber-500' : 'bg-gray-500'}`} />
+                                    </MarkerContent>
+                                    <MarkerTooltip>{loc.title}</MarkerTooltip>
+                                    <MarkerPopup>
+                                        <div className="space-y-1 p-2 bg-black/90 text-white rounded-sm border border-amber-500/20">
+                                            <p className="font-medium text-amber-500">{loc.title}</p>
+                                            <p className="text-xs opacity-70">
+                                                {loc.lat.toFixed(4)}, {loc.lng.toFixed(4)}
+                                            </p>
+                                        </div>
+                                    </MarkerPopup>
+                                </MapMarker>
+                            ))}
+                        </Map>
+                    </div>
                 </div>
             </div>
 

@@ -43,7 +43,8 @@
             "Terms & Conditions",
             "Privacy Policy",
             "FB Data Deletion Instructions",
-            "Copperleaf AR Menu App Privacy Policy"
+            "Copperleaf AR Menu App Privacy Policy",
+            "Terms & Conditions Drive: https://drive.google.com/file/d/1-kGFvLNgnmLVznr1_9bpVic74jZFvNiM/view"
         ],
         "list_items": [
             "Welcome",
@@ -1133,6 +1134,7 @@
     {
         "url": "https://www.copperleafgoa.com/reservation",
         "title": "Reservation",
+        "reservation_form_link": "https://docs.google.com/forms/d/e/1FAIpQLSd7q9aKri9SEST71514iIOMlFdPPl3Dlqyq_GwoJDD_gkWocQ/viewform?embedded=true",
         "headings": [
             "Reservation",
             "ABOUT US",

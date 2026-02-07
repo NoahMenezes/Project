@@ -86,107 +86,15 @@ export default function ReservationsPage() {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="bg-black/60 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-sm"
+                        className="bg-black/60 backdrop-blur-xl border border-white/10 p-2 rounded-sm overflow-hidden h-[800px]"
                     >
-                        <h2 className="text-3xl font-serif text-white mb-8 text-center">Request a Table</h2>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <label className="text-xs font-bold tracking-widest text-amber-500 uppercase">Name</label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        className="w-full bg-white/5 border-b border-white/20 focus:border-amber-500 text-white p-3 outline-none transition-colors"
-                                        required
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-xs font-bold tracking-widest text-amber-500 uppercase">Phone</label>
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        className="w-full bg-white/5 border-b border-white/20 focus:border-amber-500 text-white p-3 outline-none transition-colors"
-                                        required
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold tracking-widest text-amber-500 uppercase">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="w-full bg-white/5 border-b border-white/20 focus:border-amber-500 text-white p-3 outline-none transition-colors"
-                                    required
-                                />
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <label className="text-xs font-bold tracking-widest text-amber-500 uppercase">Date</label>
-                                    <input
-                                        type="date"
-                                        name="date"
-                                        value={formData.date}
-                                        onChange={handleChange}
-                                        className="w-full bg-white/5 border-b border-white/20 focus:border-amber-500 text-white p-3 outline-none transition-colors [color-scheme:dark]"
-                                        required
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-xs font-bold tracking-widest text-amber-500 uppercase">Time</label>
-                                    <select
-                                        name="time"
-                                        value={formData.time}
-                                        onChange={handleChange}
-                                        className="w-full bg-white/5 border-b border-white/20 focus:border-amber-500 text-white p-3 outline-none transition-colors [&>option]:bg-black"
-                                        required
-                                    >
-                                        <option value="">Select Time</option>
-                                        <option value="lunch">Lunch (11:30 - 3:30)</option>
-                                        <option value="dinner">Dinner (7:00 - 11:00)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold tracking-widest text-amber-500 uppercase">Guests</label>
-                                <select
-                                    name="guests"
-                                    value={formData.guests}
-                                    onChange={handleChange}
-                                    className="w-full bg-white/5 border-b border-white/20 focus:border-amber-500 text-white p-3 outline-none transition-colors [&>option]:bg-black"
-                                    required
-                                >
-                                    <option value="">Number of Guests</option>
-                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(n => (
-                                        <option key={n} value={n}>{n} {n === 1 ? 'Person' : 'People'}</option>
-                                    ))}
-                                    <option value="more">10+ (Large Group)</option>
-                                </select>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold tracking-widest text-amber-500 uppercase">Special Requests</label>
-                                <textarea
-                                    name="requests"
-                                    value={formData.requests}
-                                    onChange={handleChange}
-                                    rows={4}
-                                    className="w-full bg-white/5 border-b border-white/20 focus:border-amber-500 text-white p-3 outline-none transition-colors resize-none"
-                                ></textarea>
-                            </div>
-
-                            <button type="submit" className="w-full py-4 bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm tracking-[0.2em] uppercase transition-all duration-300 mt-4">
-                                Confirm Request
-                            </button>
-                        </form>
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSd7q9aKri9SEST71514iIOMlFdPPl3Dlqyq_GwoJDD_gkWocQ/viewform?embedded=true"
+                            className="w-full h-full border-none"
+                            title="Table Reservation Form"
+                        >
+                            Loading…
+                        </iframe>
                     </motion.div>
                 </div>
             </div>

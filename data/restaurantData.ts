@@ -1,7 +1,7 @@
 export const restaurantData = {
     navbar: {
         brand: "COPPERLEAF",
-        links: ["OUR STORY", "MENU", "OUR RESTAURANTS", "CONTACT", "ELITE CLUB"],
+        links: ["OUR STORY", "MENU", "OUR RESTAURANTS", "RESERVATIONS", "LOCATIONS", "CONTACT", "ELITE CLUB"],
         cta: "RESERVE TABLE",
         eliteClubLink: "/elite-club"
     },
@@ -55,9 +55,36 @@ export const restaurantData = {
             button: "Visit Us Today"
         }
     },
+    locations: [
+        {
+            id: 1,
+            name: "Copperleaf Panaji",
+            lat: 15.4821284,
+            lng: 73.8200714,
+            address: "St. Inez-Taleigao Road, Panaji, Goa 403001"
+        },
+        {
+            id: 2,
+            name: "Copperleaf Porvorim",
+            lat: 15.5342,
+            lng: 73.8188,
+            address: "Chogm Road, Alto-Porvorim, Goa 403521"
+        }
+    ],
+    termsDriveLink: "https://drive.google.com/file/d/1-kGFvLNgnmLVznr1_9bpVic74jZFvNiM/view",
     reservations: {
         subtitle: "Reservations",
         title: "Dine with Us",
+        formLink: "https://docs.google.com/forms/d/e/1FAIpQLSd7q9aKri9SEST71514iIOMlFdPPl3Dlqyq_GwoJDD_gkWocQ/viewform?embedded=true",
+        text: "Table Reservations are recommended. Kindly fill the form below with your request and we will get back to you.",
+        privateEvents: {
+            title: "PRIVATE EVENTS",
+            description: "Looking for an ideal venue? Look no further. Corporate dinners, special occasions, birthday celebrations, let us handle your needs. Check out Private Dining."
+        },
+        openHours: {
+            title: "OPEN HOURS",
+            schedule: "Monday thru Sunday:\n11:30 AM - 3:30 PM\n&\n7:00 PM - 11:00 PM"
+        },
         options: [
             {
                 id: "lunch",

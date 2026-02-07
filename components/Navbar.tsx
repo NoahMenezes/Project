@@ -55,9 +55,11 @@ export default function Navbar() {
                                 href={
                                     item === "MENU" ? "/menu" :
                                         item === "ELITE CLUB" ? (restaurantData.navbar as any).eliteClubLink :
-                                            item === "OUR STORY" ? "/#story" :
-                                                item === "CONTACT" ? "/#contact" :
-                                                    "#"
+                                            item === "RESERVATIONS" ? "/reservations" :
+                                                item === "LOCATIONS" ? "/locations" :
+                                                    item === "OUR STORY" ? "/#story" :
+                                                        item === "CONTACT" ? "/#contact" :
+                                                            "#"
                                 }
                                 className="text-xs font-medium tracking-widest text-white/80 hover:text-amber-400 transition uppercase"
                             >
