@@ -31,7 +31,17 @@ export default function TermsAndConditions() {
                 >
                     <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Official Documentation</span>
                     <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight mb-8">Terms & Conditions</h1>
-                    <div className="w-20 h-1 bg-amber-500 mb-12"></div>
+                    <div className="flex flex-col sm:flex-row items-center gap-6 mb-12">
+                        <div className="w-20 h-1 bg-amber-500"></div>
+                        <a
+                            href="https://drive.google.com/file/d/1-kGFvLNgnmLVznr1_9bpVic74jZFvNiM/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[10px] font-bold tracking-[0.3em] uppercase px-6 py-3 border border-amber-500/50 text-amber-500 hover:bg-amber-500 hover:text-white transition-all duration-300 rounded-sm"
+                        >
+                            View Original Document (PDF)
+                        </a>
+                    </div>
 
                     <div className="prose prose-invert max-w-none space-y-12 text-gray-300 font-light leading-relaxed">
                         <section className="bg-white/5 p-8 border border-white/10 rounded-sm">

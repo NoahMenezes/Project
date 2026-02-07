@@ -89,6 +89,9 @@ export default function EliteClubPage() {
                                 Membership extends far beyond simple points. Enjoy dedicated Table Allocation Priority, seamless Points Redemption, and special incentives for your Birthdays and Anniversaries.
                             </p>
                             <p className="text-lg text-gray-300 font-light leading-relaxed">
+                                Our members are celebrated with a <span className="text-amber-500 font-bold italic">Complimentary Commemorative Cake</span> on their special days, making every celebration at Copperleaf truly unforgettable.
+                            </p>
+                            <p className="text-lg text-gray-300 font-light leading-relaxed">
                                 Elite members also enjoy a Premise Charge Waive Off* for our 10@Infinity semi-private space and Solitaire Signature Private Dining, along with invitations to exclusive in-house events.
                             </p>
                         </div>

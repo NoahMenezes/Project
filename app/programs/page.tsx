@@ -50,10 +50,18 @@ const programs = [
                 </p>
                 <div className="mt-8 pt-8 border-t border-white/10">
                     <p className="text-xs text-amber-500 font-bold uppercase tracking-[0.2em] mb-4">Enrolled Companies</p>
-                    <div className="bg-white/5 p-6 rounded-sm border border-white/5">
-                        <p className="text-sm text-gray-400 leading-relaxed">
-                            Bank of Baroda, BNI Members, Canara Bank, Deltin Corp, Enigmasoft, FC Goa, Frontline Managed Services, GMR, Golden Globe, Group Priority, Kineco Kaman, MARC, Open Destinations, Persistent Systems, R.K. Pikale & Co., Reserve Bank of India, Sai Service, Sandu Pharma, Sanofi, State Bank of India, Tangentia, Teknorix Systems, Unichem, & Vedanta.
-                        </p>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        {[
+                            'Bank of Baroda', 'BNI Members', 'Canara Bank', 'Deltin Corp', 'Enigmasoft',
+                            'FC Goa', 'Frontline Managed Services', 'GMR', 'Golden Globe', 'Group Priority',
+                            'Kineco Kaman', 'MARC', 'Open Destinations', 'Persistent Systems', 'R.K. Pikale & Co.',
+                            'Reserve Bank of India', 'Sai Service', 'Sandu Pharma', 'Sanofi', 'State Bank of India',
+                            'Tangentia', 'Teknorix Systems', 'Unichem', 'Vedanta'
+                        ].map((company, i) => (
+                            <div key={i} className="bg-white/5 px-3 py-2 rounded-sm border border-white/5 text-[10px] text-gray-400 font-medium hover:border-amber-500/30 transition-colors uppercase tracking-wider">
+                                {company}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -73,12 +81,20 @@ const programs = [
                     INFLUENCER CONNECT PROGRAM is a flagship program of Copperleaf where we collaborate with Social Media Influencers like you to come and experience the Ultimate Dining Experience at Copperleaf and share your content with the followers.
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row items-center gap-8 p-8 bg-amber-500/5 border border-amber-500/20 rounded-sm">
-                    <div className="size-24 bg-white/10 flex-shrink-0 flex items-center justify-center border border-white/10">
-                        <span className="text-[10px] text-gray-500 uppercase tracking-widest text-center">QR Code<br />Placeholder</span>
+                    <div className="size-32 bg-white p-2 rounded-sm flex-shrink-0 flex items-center justify-center border border-white/10 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                        {/* A stylized QR Code representation */}
+                        <div className="grid grid-cols-5 grid-rows-5 gap-1 w-full h-full opacity-80">
+                            {[...Array(25)].map((_, i) => (
+                                <div key={i} className={`rounded-[1px] ${[0, 1, 4, 5, 6, 9, 20, 21, 24].includes(i) || Math.random() > 0.5 ? 'bg-black' : 'bg-transparent'}`} />
+                            ))}
+                        </div>
                     </div>
-                    <p className="text-sm text-gray-400 text-center sm:text-left">
-                        If this excites you, then kindly scan the QR code for enrollment.
-                    </p>
+                    <div className="space-y-2">
+                        <p className="text-sm text-white font-bold uppercase tracking-widest">Enrollment QR Code</p>
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                            If this excites you, then kindly scan the QR code for enrollment. Our PR team will reach out to schedule your visit.
+                        </p>
+                    </div>
                 </div>
             </div>
         )

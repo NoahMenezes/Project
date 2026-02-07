@@ -132,7 +132,11 @@ export const restaurantData = {
         },
         contact: {
             title: "Contact",
-            lines: ["eat@copperleafgoa.com", "+91 91750 18461", "+91 75582 98641"],
+            lines: [
+                "eat@copperleafgoa.com",
+                "Panaji: +91 91750 18461 / 91751 84623 / 24 / 31",
+                "Porvorim: +91 75582 98641 / 90750 18462 / 63"
+            ],
             whatsapp: [
                 "https://api.whatsapp.com/send/?phone=919175018461&text=Hi+Copperleaf!+I'd+like+to+make+an+inquiry&type=phone_number&app_absent=0",
                 "https://api.whatsapp.com/send/?phone=917558298641&text=Hi+Copperleaf!+I'd+like+to+make+an+inquiry&type=phone_number&app_absent=0"

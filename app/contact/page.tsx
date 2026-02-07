@@ -286,6 +286,46 @@ export default function ContactPage() {
                     </AnimatePresence>
                 </div>
 
+                {/* Daily Operational Table */}
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mt-32 max-w-4xl mx-auto"
+                >
+                    <div className="text-center mb-16">
+                        <span className="text-amber-500 font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Plan Your Visit</span>
+                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Operational Hours</h2>
+                        <div className="w-16 h-1 bg-amber-500 mx-auto"></div>
+                    </div>
+
+                    <div className="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-sm overflow-hidden shadow-2xl">
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="border-b border-white/10 bg-white/5">
+                                    <th className="px-8 py-6 text-amber-500 font-bold text-[10px] tracking-[0.2em] uppercase">Day</th>
+                                    <th className="px-8 py-6 text-amber-500 font-bold text-[10px] tracking-[0.2em] uppercase">Lunch Service</th>
+                                    <th className="px-8 py-6 text-amber-500 font-bold text-[10px] tracking-[0.2em] uppercase">Dinner Service</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-gray-300 font-light text-sm">
+                                {[
+                                    'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+                                ].map((day, i) => (
+                                    <tr key={day} className={`border-b border-white/5 hover:bg-white/5 transition-colors ${i === 6 ? 'border-b-0' : ''}`}>
+                                        <td className="px-8 py-5 font-medium text-white">{day}</td>
+                                        <td className="px-8 py-5 italic font-serif">11:30 AM – 3:30 PM</td>
+                                        <td className="px-8 py-5 italic font-serif">07:00 PM – 11:00 PM</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <p className="mt-6 text-center text-[10px] text-gray-500 uppercase tracking-widest italic">
+                        *Hours may vary during public holidays and special festive occasions.
+                    </p>
+                </motion.div>
+
                 {/* Final Separate Contact Form for General Queries */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
