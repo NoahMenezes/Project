@@ -50,12 +50,12 @@ function LocationsContent() {
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover opacity-40"
+                    className="w-full h-full object-cover opacity-60"
                     key="background-video"
                 >
                     <source src="/fire-mastery.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="absolute inset-0 bg-black/40"></div>
             </div>
 
             <div className="relative z-10 flex-grow pt-40 px-6 max-w-7xl mx-auto w-full">

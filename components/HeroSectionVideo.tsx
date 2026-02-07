@@ -5,11 +5,11 @@ import { restaurantData } from '@/data/restaurantData';
 export default function HeroSectionVideo() {
     return (
         <section className="relative w-full h-screen overflow-hidden bg-black">
-            <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-60">
+            <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-80">
                 <source src={restaurantData.hero.videoPath} type="video/mp4" />
             </video>
 
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none" />
 
             {/* Main Content - Centered */}
             <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">

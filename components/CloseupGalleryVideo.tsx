@@ -8,11 +8,11 @@ export default function CloseupGalleryVideo() {
             {/* Main Showcase Section with Unified Video Background */}
             <section className="relative py-40">
                 <div className="absolute inset-0 z-0">
-                    <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-60">
+                    <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-80">
                         {/* Using fire-mastery for the entire section including header */}
                         <source src="/fire-mastery.mp4" type="video/mp4" />
                     </video>
-                    <div className="absolute inset-0 bg-black/40"></div>
+                    <div className="absolute inset-0 bg-black/30"></div>
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -51,11 +51,11 @@ export default function CloseupGalleryVideo() {
             {/* Spotlight CTA Section with Video Background */}
             <section className="relative py-60 overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
-                    <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-60">
+                    <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-80">
                         {/* Using edible-art for the final CTA */}
                         <source src="/edible-art.mp4" type="video/mp4" />
                     </video>
-                    <div className="absolute inset-0 bg-black/30"></div>
+                    <div className="absolute inset-0 bg-black/20"></div>
                 </div>
 
                 <motion.div

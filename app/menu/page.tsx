@@ -33,11 +33,11 @@ export default function MenuPage() {
                             muted
                             loop
                             playsInline
-                            className="w-full h-full object-cover opacity-50"
+                            className="w-full h-full object-cover opacity-70"
                         >
                             <source src={activeOption.video} type="video/mp4" />
                         </video>
-                        <div className="absolute inset-0 bg-black/50"></div>
+                        <div className="absolute inset-0 bg-black/30"></div>
                     </motion.div>
                 </AnimatePresence>
             </div>
