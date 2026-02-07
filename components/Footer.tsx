@@ -123,14 +123,9 @@ export default function Footer() {
                         <Link href="/careers" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
                             Careers
                         </Link>
-                        <a
-                            href={(restaurantData as any).termsDriveLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300"
-                        >
+                        <Link href="/terms" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
                             Terms & Conditions
-                        </a>
+                        </Link>
                         <Link href="/privacy" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
                             Privacy Policy
                         </Link>

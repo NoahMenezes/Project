@@ -71,7 +71,6 @@ export const restaurantData = {
             address: "Chogm Road, Alto-Porvorim, Goa 403521"
         }
     ],
-    termsDriveLink: "https://drive.google.com/file/d/1-kGFvLNgnmLVznr1_9bpVic74jZFvNiM/view",
     reservations: {
         subtitle: "Reservations",
         title: "Reservation",

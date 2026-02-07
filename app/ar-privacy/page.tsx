@@ -10,7 +10,16 @@ export default function ARPrivacyPolicyPage() {
 
             {/* Subtle background */}
             <div className="fixed inset-0 z-0 bg-black">
-                <div className="absolute inset-0 bg-gradient-to-b from-amber-600/5 to-transparent"></div>
+                <div className="absolute inset-0 bg-black/80 z-10"></div>
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover opacity-20"
+                >
+                    <source src="/sourced-daily.mp4" type="video/mp4" />
+                </video>
             </div>
 
             <div className="relative z-10 flex-grow pt-40 pb-24 px-6 max-w-4xl mx-auto w-full">
