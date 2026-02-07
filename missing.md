@@ -5,8 +5,9 @@ Careers Page (/careers): [DONE] - Premium careers landing page created with cate
 News Page (/news): [DONE] - Latest news landing page with award updates and social media profile integration.
 Gallery Page (/gallery): [DONE] - Placeholder gallery created.
 Corporate Discount Dedicated Page (/corporate-discount): [DONE] - Full landing page with program details and enrollment form.
-FB Data Deletion Instructions: Legally required for Facebook integrations mentioned in your "More Info" footer data.
-AR Menu App Privacy Policy: The JSON specifically mentions a privacy policy for a "Copperleaf AR Menu App".
+FB Data Deletion Instructions: [DONE] - Dedicated instruction page with step-by-step removal guide.
+Privacy Policy: [DONE] - Fully populated with Copperleaf-specific data collection and usage info.
+AR Menu App Privacy Policy: [DONE] - Detailed privacy terms for the mobile AR application created and linked.
 📖 2. Content Gaps (On Existing Pages)
 About Us / Our Company
 Subsidiaries: Missing mention of the broader Vishwamukta Group ventures: Omkar Developers, VMPL, VME, and Megalon.

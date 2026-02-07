@@ -131,8 +131,14 @@ export default function Footer() {
                         >
                             Terms & Conditions
                         </a>
-                        <Link href="/terms" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
+                        <Link href="/privacy" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
                             Privacy Policy
+                        </Link>
+                        <Link href="/fb-data-deletion" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
+                            FB Data Deletion
+                        </Link>
+                        <Link href="/ar-privacy" className="text-white hover:text-amber-500 text-[9px] tracking-[0.3em] uppercase transition-all duration-300">
+                            AR Menu Privacy
                         </Link>
                     </div>
                 </div>
