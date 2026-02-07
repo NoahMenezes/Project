@@ -183,7 +183,7 @@ export default function ContactPage() {
     const [modalConfig, setModalConfig] = useState({ title: '', message: '', type: 'success' as 'success' | 'confirm' });
     const [loadCount, setLoadCount] = useState(0);
 
-    const handleTabChange = (option: any) => {
+    const handleTabChange = (option: typeof contactOptions[0]) => {
         setActiveOption(option);
         setLoadCount(0); // Reset load count for the new tab's iframe
     };

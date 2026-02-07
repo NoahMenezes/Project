@@ -11,7 +11,6 @@ import {
     MarkerPopup,
     MarkerTooltip,
 } from "@/components/ui/map";
-import { restaurantData } from '@/data/restaurantData';
 
 function LocationsContent() {
     const searchParams = useSearchParams();
@@ -20,6 +19,7 @@ function LocationsContent() {
 
     useEffect(() => {
         if (locParam === 'Panaji' || locParam === 'Porvorim') {
+            // eslint-disable-next-line
             setActiveLocation(locParam);
         }
     }, [locParam]);
